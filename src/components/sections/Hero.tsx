@@ -1,326 +1,238 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShoppingBag, MessageCircle, TrendingUp, ArrowRight, Play, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  Bookmark,
+  Heart,
+  MapPin,
+  MessageCircle,
+  Music,
+  Send,
+  ShieldCheck,
+  Sparkles,
+  ShoppingBag,
+} from "lucide-react";
 
-// Floating animated chat bubble
-const FloatingBubble = ({ text, sender, positionClass, delay }: { text: string, sender: 'buyer' | 'seller', positionClass: string, delay: number }) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.8, y: 15 }}
-    animate={{ opacity: 1, scale: 1, y: 0 }}
-    transition={{ 
-      duration: 0.6, 
-      delay, 
-      type: "spring", 
-      stiffness: 100,
-      damping: 15
-    }}
-    className={`absolute z-30 flex items-start gap-2.5 p-3 rounded-2xl text-[11px] font-medium shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-xl border ${positionClass} ${
-      sender === 'buyer' 
-        ? 'bg-[#181614]/95 border-white/10 text-white/90'
-        : 'bg-[#A67C52]/95 border-[#C49A6C]/30 text-white'
-    }`}
-  >
-    <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[9px] flex-shrink-0 mt-0.5 ${sender === 'buyer' ? 'bg-[#A67C52]/20' : 'bg-black/20'}`}>
-      {sender === 'buyer' ? '👤' : '🛍️'}
-    </div>
-    <div className="leading-snug">
-      <p className="font-bold text-[9px] text-[#C49A6C] mb-0.5">{sender === 'buyer' ? 'Buyer enquiry' : 'Store reply'}</p>
-      <p>{text}</p>
-    </div>
-  </motion.div>
-);
+function FeedPhone() {
+  return (
+    <div className="phone-shell w-[315px] max-w-full relative shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] rounded-[26px]">
+      <div className="relative min-h-[620px] overflow-hidden rounded-[26px] bg-[#0c0a08] text-white ring-1 ring-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_20%,rgba(196,154,108,0.42),transparent_28%),linear-gradient(160deg,#2b2119_0%,#11100f_44%,#050505_100%)]" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/70 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-black via-black/70 to-transparent" />
 
-// Floating animated notification
-const PayoutAlert = ({ delay }: { delay: number }) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.8, x: -20 }}
-    animate={{ opacity: 1, scale: 1, x: 0 }}
-    transition={{ duration: 0.6, delay, type: "spring" }}
-    className="absolute z-30 bottom-16 -left-12 bg-emerald-950/90 border border-emerald-500/30 text-emerald-300 p-3.5 rounded-2xl flex items-center gap-3 shadow-[0_24px_48px_rgba(16,185,129,0.25)] backdrop-blur-xl max-w-[200px]"
-  >
-    <div className="w-8 h-8 rounded-xl bg-emerald-500/20 flex items-center justify-center text-sm flex-shrink-0 text-emerald-400">
-      <Zap size={16} />
-    </div>
-    <div>
-      <p className="text-[9px] text-emerald-400/70 font-bold uppercase tracking-wider">Payout Dispatched</p>
-      <p className="text-xs font-black text-white">₦128,500 sent</p>
-    </div>
-  </motion.div>
-);
-
-const PhoneMockup = () => (
-  <div className="phone-frame w-[270px] h-[540px] flex-shrink-0 relative overflow-hidden bento-glow">
-    {/* Screen glare/sheen */}
-    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none z-20" />
-
-    {/* Status bar */}
-    <div className="bg-[#0c0a08] h-12 flex items-center justify-between px-6 pt-6 relative z-10">
-      <span className="text-white/80 text-[11px] font-semibold tracking-tight">9:41</span>
-      <div className="flex gap-1.5 items-center">
-        <span className="text-[10px] text-white/50">LTE</span>
-        <div className="w-4.5 h-2.5 border border-white/40 rounded-[3px] relative flex items-center">
-          <div className="absolute left-[2px] right-[4px] top-[2px] bottom-[2px] bg-white/80 rounded-[1px]" />
-        </div>
-      </div>
-    </div>
-
-    {/* App header */}
-    <div className="bg-[#0c0a08]/90 backdrop-blur-md px-5 py-3 flex items-center justify-between border-b border-white/5 relative z-10">
-      <span className="text-white font-black text-lg">Chat<span className="text-[#A67C52]">Cart</span></span>
-      <div className="flex items-center gap-2 bg-white/5 border border-white/8 rounded-full px-3 py-1">
-        <span className="text-white/40 text-[10px] font-medium">Search items...</span>
-      </div>
-    </div>
-
-    {/* Product feed */}
-    <div className="bg-[#0c0a08] h-[calc(100%-110px)] flex flex-col justify-between overflow-hidden">
-      {/* Product container */}
-      <div className="relative flex-1 bg-gradient-to-br from-[#1c1814] to-[#0c0a08] p-4 flex flex-col justify-between">
-        {/* Product Card visual */}
-        <div className="rounded-2xl overflow-hidden border border-white/5 bg-[#141210]/60 p-3 flex-1 flex flex-col justify-between">
-          <div className="relative flex-1 rounded-xl bg-gradient-to-br from-[#2e261d] to-[#120f0c] border border-white/5 flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(166,124,82,0.15)_0%,transparent_70%)]" />
-            <ShoppingBag size={48} className="text-[#A67C52]/50 animate-pulse" />
-            
-            {/* Live badge */}
-            <span className="absolute top-2.5 right-2.5 bg-emerald-500/25 border border-emerald-500/30 text-emerald-400 text-[9px] font-bold px-2 py-0.5 rounded-full">
-              In Stock
-            </span>
+        <div className="relative z-10 flex items-center justify-between px-4 pt-4">
+          <div className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[11px] font-black backdrop-blur-md">
+            For You
           </div>
-
-          <div className="mt-3">
-            <div className="flex justify-between items-start">
-              <div>
-                <p className="text-white font-bold text-sm">Luxury Ankara Jacket</p>
-                <p className="text-white/40 text-[10px] mt-0.5">Fashion & Design • Lagos</p>
-              </div>
-              <div className="text-right">
-                <p className="text-[#C49A6C] font-black text-base">₦45,000</p>
-              </div>
-            </div>
+          <div className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[11px] font-bold text-white/70 backdrop-blur-md">
+            Kano
           </div>
         </div>
 
-        {/* CTA in-app banner */}
-        <div className="mt-3 bg-white/[0.02] border border-white/5 rounded-xl p-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#A67C52] to-[#8B623E] flex items-center justify-center text-[10px] text-white font-bold">
-              FH
-            </div>
-            <div>
-              <p className="text-white text-[10px] font-bold">FashionHub NG</p>
-              <p className="text-white/40 text-[9px]">Verified Seller</p>
+        <div className="absolute right-4 top-36 z-10 flex flex-col items-center gap-5">
+          <div className="rounded-full bg-gradient-to-br from-[#C49A6C] to-[#8B623E] p-[3px]">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#15110d] text-sm font-black">
+              LS
             </div>
           </div>
-          <button className="bg-[#A67C52] text-white text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-[0_4px_12px_rgba(166,124,82,0.3)]">
-            Message Store
-          </button>
-        </div>
-      </div>
-
-      {/* Bottom navigation */}
-      <div className="px-5 py-3.5 bg-[#0c0a08]/90 border-t border-white/5 flex items-center justify-between text-white/45">
-        <span className="text-[#A67C52] font-black text-xs">Feed</span>
-        <MessageCircle size={15} />
-        <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-[9px]">👤</span>
-      </div>
-    </div>
-  </div>
-);
-
-const SellerDashMockup = () => (
-  <div className="phone-frame w-[220px] h-[420px] flex-shrink-0 overflow-hidden bento-glow" style={{ animationDelay: "1s" }}>
-    <div className="bg-[#0c0a08] h-full p-4 flex flex-col gap-3.5">
-      {/* App Header info */}
-      <div className="pt-6 flex justify-between items-center">
-        <div>
-          <p className="text-white/40 text-[8px] font-bold tracking-widest uppercase">My Shop</p>
-          <p className="text-white font-black text-sm">Merchant Portal</p>
-        </div>
-        <span className="w-2.5 h-2.5 rounded-full bg-[#A67C52] animate-pulse" />
-      </div>
-
-      {/* Financials widget */}
-      <div className="bg-gradient-to-br from-[#A67C52] to-[#8B623E] rounded-2xl p-3.5 shadow-xl relative overflow-hidden">
-        <div className="absolute right-[-10px] top-[-10px] w-20 h-20 bg-white/5 rounded-full blur-xl" />
-        <p className="text-white/70 text-[9px] font-semibold">Available for payout</p>
-        <p className="text-white font-black text-lg mt-0.5">₦128,500</p>
-        <div className="mt-3 flex items-center justify-between">
-          <span className="text-[8px] text-white/50 font-medium">Bank transfer ready</span>
-          <button className="bg-white text-[#8B623E] text-[9px] font-black px-2.5 py-1 rounded-lg">
-            Withdraw
-          </button>
-        </div>
-      </div>
-
-      {/* Metrics mini grid */}
-      <div className="grid grid-cols-2 gap-2">
-        <div className="bg-white/[0.02] border border-white/5 rounded-xl p-2 text-center">
-          <p className="text-white font-black text-sm">24</p>
-          <p className="text-white/40 text-[8px] mt-0.5">Active Products</p>
-        </div>
-        <div className="bg-white/[0.02] border border-white/5 rounded-xl p-2 text-center">
-          <p className="text-emerald-400 font-black text-sm">98.2%</p>
-          <p className="text-white/40 text-[8px] mt-0.5">Fulfilled</p>
-        </div>
-      </div>
-
-      {/* Sales list */}
-      <div className="flex-1 bg-white/[0.02] border border-white/5 rounded-xl p-3 flex flex-col justify-between">
-        <div>
-          <p className="text-white/30 text-[8px] font-bold tracking-wider mb-2">RECENT SETTLEMENTS</p>
-          {[["Amara S.", "₦12,000"], ["Kemi O.", "₦8,500"]].map(([name, amount], i) => (
-            <div key={i} className="flex justify-between items-center py-1.5 border-b border-white/5 last:border-0">
-              <span className="text-white text-[9px] font-medium">{name}</span>
-              <span className="text-emerald-400 text-[9px] font-bold">{amount}</span>
+          {[
+            { icon: Heart, label: "12.8k" },
+            { icon: MessageCircle, label: "340" },
+            { icon: Bookmark, label: "Save" },
+            { icon: Send, label: "Share" },
+          ].map(({ icon: Icon, label }) => (
+            <div key={label} className="flex flex-col items-center gap-1">
+              <button className="flex h-11 w-11 items-center justify-center rounded-full bg-black/35 backdrop-blur-md">
+                <Icon size={20} fill={label === "12.8k" ? "currentColor" : "none"} />
+              </button>
+              <span className="text-[10px] font-black text-white/85">{label}</span>
             </div>
           ))}
         </div>
-        <div className="text-center pt-2">
-          <span className="text-[8px] text-[#A67C52] font-semibold">View financial ledger →</span>
+
+        <div className="absolute bottom-0 left-0 right-0 z-10 p-4 pr-20">
+          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-black/35 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-[#C49A6C] backdrop-blur-md">
+            <Music size={12} />
+            seller sound
+          </div>
+          <p className="text-lg font-black leading-tight">Handmade Abaya two-piece, available today</p>
+          <p className="mt-2 text-xs font-semibold leading-5 text-white/72">
+            @lola.styles_ng - Swipe into the full product story, ask questions, or checkout with escrow.
+          </p>
+          <div className="mt-3 flex items-center gap-2 text-xs font-bold text-white/70">
+            <MapPin size={13} className="text-[#C49A6C]" />
+            Kano
+          </div>
+          <div className="mt-4 flex gap-2">
+            <button className="flex-1 rounded-full bg-[#A67C52] px-4 py-3 text-sm font-black text-white shadow-[0_12px_30px_rgba(166,124,82,0.35)]">
+              Buy N38,000
+            </button>
+            <button className="rounded-full border border-white/18 bg-white/12 px-5 py-3 text-sm font-black backdrop-blur-md">
+              DM
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
+
+function FloatingCards() {
+  return (
+    <>
+      {/* Top Left: Chat Context */}
+      <motion.div
+        animate={{ y: [0, -15, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -left-20 top-20 z-30 hidden lg:block"
+        style={{ transform: "translateZ(80px)" }}
+      >
+        <div className="soft-panel w-[240px] rounded-3xl p-5 shadow-2xl bg-white/95 backdrop-blur-xl border border-white/40">
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f4eadf] text-[#8B623E]">
+              <MessageCircle size={18} />
+            </div>
+            <div>
+              <p className="text-sm font-black text-[#17211f]">Instant Context</p>
+              <p className="text-[11px] font-bold text-[#66746f]">DMs are auto-filled</p>
+            </div>
+          </div>
+          <div className="mt-4 rounded-2xl bg-[#17211f] p-3 text-white relative">
+             <div className="absolute -top-1.5 left-4 w-3 h-3 bg-[#17211f] rotate-45" />
+             <p className="text-[11px] font-medium text-white/90 leading-relaxed relative z-10">
+               "Hi, I saw this Abaya piece on your feed. Is it available in size M?"
+             </p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Bottom Right: Escrow Shield */}
+      <motion.div
+        animate={{ y: [0, 15, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute -right-16 bottom-24 z-30 hidden lg:block"
+        style={{ transform: "translateZ(100px)" }}
+      >
+        <div className="rounded-[24px] p-5 shadow-2xl bg-[#17211f] text-white border border-white/10">
+          <div className="flex items-center gap-4">
+             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#2b3a37] text-[#55d596]">
+              <ShieldCheck size={22} />
+            </div>
+            <div>
+              <p className="text-base font-black text-white">Escrow Secured</p>
+              <p className="mt-0.5 text-xs font-semibold text-white/60">Funds held till delivery</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Top Right: Recent Order */}
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        className="absolute -right-8 top-12 z-10 hidden lg:block"
+        style={{ transform: "translateZ(40px)" }}
+      >
+        <div className="soft-panel flex items-center gap-3 rounded-2xl p-3 shadow-xl bg-white/90 backdrop-blur-md border border-white/30">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#C49A6C] to-[#8B623E] text-white">
+            <ShoppingBag size={15} />
+          </div>
+          <div className="pr-2">
+            <p className="text-[10px] font-bold text-[#66746f] uppercase tracking-wide">Just bought</p>
+            <p className="text-xs font-black text-[#17211f]">Kano</p>
+          </div>
+        </div>
+      </motion.div>
+    </>
+  );
+}
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-20">
-      {/* Background visual components */}
-      <div className="absolute inset-0 z-0">
-        <div className="glow-orb w-[750px] h-[750px] bg-[#A67C52]/10 top-[-250px] left-[-200px]" />
-        <div className="glow-orb w-[550px] h-[550px] bg-[#A67C52]/8 bottom-[-150px] right-[-100px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(166,124,82,0.06)_0%,transparent_70%)]" />
-        {/* Dynamic mesh grid */}
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(166,124,82,0.6) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(166,124,82,0.6) 1.5px, transparent 1.5px)`,
-            backgroundSize: "64px 64px"
-          }}
-        />
-      </div>
+    <section className="market-grid relative overflow-hidden pt-28 pb-20 lg:pt-36 bg-[#fcfaf8]">
+      {/* Decorative gradient orb for background depth */}
+      <div className="absolute top-1/4 right-0 w-[800px] h-[800px] bg-[#C49A6C]/10 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 w-full z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-          
-          {/* Left Side: Copy Stack */}
-          <div className="flex-1 text-center lg:text-left">
-            {/* Social Proof Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-[#A67C52]/10 border border-[#A67C52]/25 rounded-full px-4.5 py-2 mb-8 shadow-sm"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#A67C52] animate-ping" />
-              <span className="text-[11px] font-black text-[#C49A6C] uppercase tracking-wider">Nigeria's Premier Social Marketplace</span>
-            </motion.div>
-
-            {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.08] tracking-tight mb-8"
-            >
-              <span className="text-white">Your store.</span>
-              <br />
-              <span className="gradient-text">Your rules.</span>
-              <br />
-              <span className="text-white/30 text-4xl sm:text-5xl lg:text-6xl">Your phone.</span>
-            </motion.h1>
-
-            {/* Subheadline */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 font-medium"
-            >
-              ChatCart is the social marketplace app designed to empower Nigerian entrepreneurs. Showcase products via photo or video, talk directly to buyers, and secure checkout with Paystack.
-            </motion.p>
-
-            {/* Action Group */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4.5 justify-center lg:justify-start"
-            >
-              <a
-                href="#download"
-                className="btn-brand flex items-center justify-center gap-2.5 px-8 py-4.5 rounded-2xl text-base font-bold text-white shadow-xl"
-              >
-                <ShoppingBag size={19} />
-                <span>Get App Free</span>
-                <ArrowRight size={17} />
-              </a>
-              <a
-                href="#how-it-works"
-                className="btn-outline flex items-center justify-center gap-2.5 px-8 py-4.5 rounded-2xl text-base font-bold"
-              >
-                <Play size={15} className="text-[#A67C52] fill-[#A67C52]" />
-                <span>Watch Walkthrough</span>
-              </a>
-            </motion.div>
-
-            {/* Compliance Badges */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap items-center gap-6 mt-12 justify-center lg:justify-start"
-            >
-              {[
-                { icon: ShieldCheck, label: "Paystack Partner" },
-                { icon: CheckCircle2, label: "Zero Setup Fees" },
-              ].map(({ icon: Icon, label }) => (
-                <div key={label} className="flex items-center gap-2 text-xs text-white/40 font-bold bg-white/[0.02] border border-white/5 rounded-xl px-4 py-2">
-                  <Icon size={14} className="text-[#A67C52]" />
-                  <span>{label}</span>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Right Side: Multi-layered mockups */}
+      <div className="section-wrap relative z-10">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+          {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: 30, scale: 0.96 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
-            className="flex-shrink-0 flex items-end gap-6 justify-center relative select-none mt-8 lg:mt-0"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55 }}
           >
-            {/* Background halo */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#A67C52]/10 blur-[100px] pointer-events-none z-0 rounded-full" />
-
-            {/* Animated Chat bubbles orbiting mockup */}
-            <FloatingBubble 
-              text="Hello! Is this fabric in stock?" 
-              sender="buyer" 
-              positionClass="-left-14 top-20 w-[180px]"
-              delay={1.5}
-            />
-
-            <FloatingBubble 
-              text="Yes! Delivery takes 2 days 🚚" 
-              sender="seller" 
-              positionClass="-right-12 top-[160px] w-[185px]"
-              delay={2.3}
-            />
-
-            <PayoutAlert delay={3.0} />
-
-            {/* Seller dashboard (in background, smaller) */}
-            <div className="hidden sm:block mb-[-20px] opacity-60 hover:opacity-100 transition-opacity duration-300 relative z-10">
-              <SellerDashMockup />
+            <div className="tag-pill mb-6 bg-white/80 backdrop-blur-sm shadow-sm border border-black/5 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-black uppercase tracking-widest text-[#17211f]">
+              <Sparkles size={14} className="text-[#A67C52]" />
+              The Next Gen of Social Commerce
             </div>
-
-            {/* Main phone (foreground) */}
-            <div className="relative z-20 hover:scale-[1.02] transition-transform duration-500 cursor-pointer">
-              <PhoneMockup />
+            <h1 className="display-title mt-2 max-w-3xl text-[2.75rem] leading-[1.05] sm:text-6xl lg:text-[68px] font-black tracking-[-0.03em] text-[#111]">
+              Swipe like reels. <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A67C52] to-[#d6b797]">Buy in the moment.</span>
+            </h1>
+            <p className="muted-copy mt-6 max-w-[480px] text-lg text-[#555] leading-[1.6]">
+              ChatCart turns local shopping into an immersive feed. Swipe through products, DM sellers with auto-saved context, and checkout securely with escrow.
+            </p>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="#app-preview" className="btn-primary flex items-center justify-center gap-2 rounded-full bg-[#17211f] px-8 py-4 text-[15px] font-black text-white transition-transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(23,33,31,0.15)]">
+                Explore the feed
+                <ArrowRight size={18} />
+              </a>
+              <a href="#features" className="btn-secondary flex items-center justify-center rounded-full border border-black/10 bg-white px-8 py-4 text-[15px] font-black text-[#17211f] transition-colors hover:bg-black/5">
+                See how it works
+              </a>
             </div>
+            
+            {/* Quick stats replacing the plain grid */}
+            <div className="mt-14 flex items-center gap-6 border-t border-black/5 pt-8">
+               <div className="flex -space-x-3">
+                 {[
+                   "https://i.pravatar.cc/100?img=12",
+                   "https://i.pravatar.cc/100?img=33",
+                   "https://i.pravatar.cc/100?img=47",
+                   "https://i.pravatar.cc/100?img=28"
+                 ].map((src, i) => (
+                   <div key={i} className={`w-11 h-11 rounded-full border-[3px] border-[#fcfaf8] bg-gray-200 overflow-hidden relative z-[${40-i}]`} style={{ zIndex: 40 - i }}>
+                     <img src={src} alt="User" className="w-full h-full object-cover" />
+                   </div>
+                 ))}
+               </div>
+               <div>
+                 <div className="flex items-center gap-1.5">
+                   <div className="flex gap-0.5 text-[#A67C52]">
+                     {[1,2,3,4,5].map(star => <span key={star} className="text-[15px]">★</span>)}
+                   </div>
+                   <span className="text-[13px] font-black text-[#111]">4.9/5</span>
+                 </div>
+                 <p className="text-[13px] font-semibold text-[#666] mt-0.5">from 10k+ active buyers</p>
+               </div>
+            </div>
+          </motion.div>
+
+          {/* Right Content - The 3D Floating Ecosystem */}
+          <motion.div
+            id="app-preview"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
+            className="relative flex justify-center mt-16 lg:mt-0"
+            style={{ perspective: "1200px" }}
+          >
+            {/* 3D Wrapper */}
+            <motion.div 
+              className="relative w-full max-w-[400px] flex justify-center items-center"
+              animate={{ rotateY: [-8, 2, -8], rotateX: [3, 7, 3] }}
+              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+              style={{ transformStyle: "preserve-3d", transform: "rotateY(-12deg) rotateX(5deg) rotateZ(-2deg)" }}
+            >
+              {/* Decorative rings behind phone for depth */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full border border-[#C49A6C]/20" style={{ transform: "translateZ(-80px)" }} />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full border border-[#C49A6C]/10" style={{ transform: "translateZ(-140px)" }} />
+              
+              <FeedPhone />
+              <FloatingCards />
+            </motion.div>
           </motion.div>
         </div>
       </div>

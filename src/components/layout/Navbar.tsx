@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, ShoppingBag, X } from "lucide-react";
 
 const navLinks = [
+  { label: "App preview", href: "#app-preview" },
   { label: "Features", href: "#features" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Sellers", href: "#sellers" },
-  { label: "Security", href: "#security" },
+  { label: "Flow", href: "#how-it-works" },
+  { label: "Trust", href: "#security" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -18,98 +18,85 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20);
+    const handler = () => setScrolled(window.scrollY > 18);
+    handler();
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
   return (
     <>
-      <motion.header
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] as const }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#0c0a08]/90 backdrop-blur-xl border-b border-[rgba(166,124,82,0.15)] shadow-[0_0_60px_rgba(0,0,0,0.5)]"
+            ? "bg-[#fbf8f2]/88 backdrop-blur-xl border-b border-[rgba(23,33,31,0.08)]"
             : "bg-transparent"
         }`}
       >
-        <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group" id="nav-logo">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#A67C52] to-[#8B623E] flex items-center justify-center shadow-[0_0_20px_rgba(166,124,82,0.4)] group-hover:shadow-[0_0_30px_rgba(166,124,82,0.6)] transition-all duration-300">
-              <ShoppingBag size={16} className="text-white" />
-            </div>
-            <span className="font-black text-lg tracking-tight text-white">
+        <nav className="section-wrap h-[72px] flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2.5" id="nav-logo">
+            <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#17211f] text-white shadow-sm">
+              <ShoppingBag size={18} />
+            </span>
+            <span className="text-xl font-black tracking-tight text-[#17211f]">
               Chat<span className="text-[#A67C52]">Cart</span>
             </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200"
+                className="rounded-full px-4 py-2 text-sm font-bold text-[#53625e] transition-colors hover:bg-white/80 hover:text-[#17211f]"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#download"
-              className="btn-brand relative z-10 flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white"
-              id="nav-cta"
-            >
-              <span>Download Free</span>
-            </a>
-          </div>
+          <a href="#download" className="btn-primary hidden px-5 py-2.5 text-sm md:inline-flex" id="nav-cta">
+            View app
+          </a>
 
-          {/* Mobile toggle */}
           <button
-            className="md:hidden p-2 rounded-lg glass text-white/70 hover:text-white transition-colors"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(23,33,31,0.12)] bg-white/80 text-[#17211f] md:hidden"
+            onClick={() => setMobileOpen((open) => !open)}
+            aria-label="Toggle navigation"
+            aria-expanded={mobileOpen}
             id="nav-mobile-toggle"
           >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            {mobileOpen ? <X size={19} /> : <Menu size={19} />}
           </button>
         </nav>
-      </motion.header>
+      </header>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-16 z-40 glass border-b border-[rgba(166,124,82,0.15)] py-4 px-6 md:hidden"
+            exit={{ opacity: 0, y: -8 }}
+            className="fixed inset-x-4 top-20 z-40 rounded-3xl border border-[rgba(23,33,31,0.1)] bg-white/95 p-3 shadow-2xl backdrop-blur-xl md:hidden"
           >
-            <div className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="px-4 py-3 text-sm font-medium text-white/70 hover:text-white rounded-xl hover:bg-white/5 transition-all"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <a
-                href="#download"
-                className="btn-brand mt-2 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white"
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block rounded-2xl px-4 py-3 text-sm font-bold text-[#53625e] hover:bg-[#f4efe6] hover:text-[#17211f]"
                 onClick={() => setMobileOpen(false)}
               >
-                Download Free
-              </a>
-            </div>
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href="#download"
+              className="btn-primary mt-2 w-full px-5 py-3 text-sm"
+              onClick={() => setMobileOpen(false)}
+            >
+              View app
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,87 +1,85 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About ChatCart — Our Story",
-  description: "Learn how ChatCart is empowering Nigerian entrepreneurs to build real businesses from their phones.",
+  title: "About ChatCart - Social Commerce for Local Sellers",
+  description:
+    "Learn how ChatCart turns short-form product discovery into contextual chat, escrow checkout, and local delivery.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen pt-24 pb-32">
-      {/* Hero */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#A67C52]/8 blur-[120px] pointer-events-none" />
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 glass-brand rounded-full px-4 py-2 mb-6">
-            <span className="text-xs font-bold text-[#C49A6C] tracking-wide">Our Story</span>
+    <div className="min-h-screen bg-[#17211f] pt-24 pb-32">
+      <div className="relative overflow-hidden py-24">
+        <div className="absolute top-0 left-1/2 h-[400px] w-[600px] -translate-x-1/2 bg-[#A67C52]/10 blur-[120px] pointer-events-none" />
+        <div className="relative mx-auto max-w-4xl px-6 text-center">
+          <div className="glass-brand mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2">
+            <span className="text-xs font-bold tracking-wide text-[#C49A6C]">Our Story</span>
           </div>
-          <h1 className="text-5xl sm:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
-            Built for African <br />
-            <span className="gradient-text-brand">entrepreneurs</span>
+          <h1 className="mb-6 text-5xl font-black leading-tight tracking-tight text-white sm:text-6xl">
+            Built for social-first <br />
+            <span className="gradient-text-brand">African commerce</span>
           </h1>
-          <p className="text-xl text-white/50 leading-relaxed max-w-2xl mx-auto">
-            ChatCart was born out of frustration. Too many talented Nigerian sellers were running their businesses over WhatsApp chats, dealing with payment scams, and losing customers because they had no professional storefront.
+          <p className="mx-auto max-w-2xl text-xl leading-relaxed text-white/55">
+            ChatCart was born from a simple problem: buyers discover products on reels, TikTok, Instagram, and status posts, then lose the buying context inside messy WhatsApp conversations.
           </p>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="max-w-3xl mx-auto px-6 space-y-16">
+      <div className="mx-auto max-w-3xl space-y-16 px-6">
         <div className="section-divider" />
 
         <section>
-          <h2 className="text-2xl font-black text-white mb-4">The Problem We Solved</h2>
-          <p className="text-white/50 leading-relaxed mb-4">
-            Millions of Nigerians are running businesses from their phones — selling fashion, electronics, food, beauty products, and more. But the tools available to them were inadequate. WhatsApp chats are unorganised. Instagram DMs are unreliable. And formal e-commerce platforms are too complex, too expensive, or not built for Africa.
+          <h2 className="mb-4 text-2xl font-black text-white">The Problem We Solved</h2>
+          <p className="mb-4 leading-relaxed text-white/55">
+            Social media made local products exciting to discover, but it did not finish the buying journey. Buyers scroll endlessly, ask for seller numbers, move to WhatsApp, repeat product questions, negotiate without context, and hope payment goes safely.
           </p>
-          <p className="text-white/50 leading-relaxed">
-            Sellers were losing money to fraud. Buyers had no trust mechanism. Payments were a mess of bank transfers and "send the alert" anxiety. We decided to fix all of it in one app.
+          <p className="leading-relaxed text-white/55">
+            Sellers deal with the other side of that chaos: hundreds of chats, missing product references, repeated price questions, delivery confusion, and no clean path from interest to escrow-backed checkout.
           </p>
         </section>
 
-        <div className="glass-brand rounded-3xl p-10 border border-[rgba(166,124,82,0.2)] text-center">
-          <p className="text-3xl font-black text-white mb-2">Our Mission</p>
-          <p className="text-xl text-[#C49A6C] font-semibold leading-relaxed max-w-xl mx-auto">
-            "To give every African entrepreneur a world-class storefront in their pocket."
+        <div className="glass-brand rounded-3xl border border-[rgba(166,124,82,0.24)] p-10 text-center">
+          <p className="mb-2 text-3xl font-black text-white">Our Mission</p>
+          <p className="mx-auto max-w-xl text-xl font-semibold leading-relaxed text-[#C49A6C]">
+            "To turn social discovery into safe, contextual commerce for every African seller."
           </p>
         </div>
 
         <section>
-          <h2 className="text-2xl font-black text-white mb-4">What We Built</h2>
-          <p className="text-white/50 leading-relaxed mb-4">
-            ChatCart combines a social product feed with a serious e-commerce backend. Sellers get a full dashboard with analytics, order management, customer tracking, and Paystack-powered payouts. Buyers get a safe, browsable marketplace where every seller is verified and every payment is protected.
+          <h2 className="mb-4 text-2xl font-black text-white">What We Built</h2>
+          <p className="mb-4 leading-relaxed text-white/55">
+            ChatCart combines a full-screen vertical product feed with serious commerce infrastructure. Sellers post video or photo stories. Buyers like, save, comment, DM, ask for price, or buy from the exact item they are viewing.
           </p>
-          <p className="text-white/50 leading-relaxed">
-            We built on Firebase for reliability and Paystack for payments — the same infrastructure trusted by Nigeria's largest companies — and wrapped it in an app that feels as good as anything from Silicon Valley, designed specifically for how Nigerians actually buy and sell.
+          <p className="leading-relaxed text-white/55">
+            The chat carries the product preview automatically, checkout can pre-fill local delivery context, and escrow keeps payment tied to the order until delivery is confirmed.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-black text-white mb-6">The Stack</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <h2 className="mb-6 text-2xl font-black text-white">The Stack</h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             {[
-              ["React Native", "Cross-platform mobile"],
+              ["React Native", "Mobile app"],
+              ["FlashList", "Fast vertical feed"],
               ["Firebase", "Backend & database"],
               ["Paystack", "Payments & payouts"],
-              ["Expo", "Build & deploy"],
-              ["Firestore", "Real-time data"],
-              ["Firebase Storage", "Media & uploads"],
+              ["Firestore", "Real-time chat"],
+              ["Firebase Storage", "Video & media"],
             ].map(([tech, desc]) => (
-              <div key={tech} className="glass rounded-2xl p-5 border border-white/6">
-                <p className="text-white font-bold text-sm mb-1">{tech}</p>
-                <p className="text-white/35 text-xs">{desc}</p>
+              <div key={tech} className="glass rounded-2xl border border-white/10 p-5">
+                <p className="mb-1 text-sm font-bold text-white">{tech}</p>
+                <p className="text-xs text-white/40">{desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <div className="text-center pt-8">
-          <a
-            href="#download"
-            className="btn-brand inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-base font-bold text-white"
-          >
-            Download ChatCart Free
-          </a>
+        <div className="pt-8 text-center">
+          <Link href="/#download" className="btn-brand inline-flex px-8 py-4 text-base">
+            Explore ChatCart
+          </Link>
         </div>
       </div>
     </div>
