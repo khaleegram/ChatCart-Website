@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { useState } from "react";
 import { Mail, MessageCircle, MapPin, Send } from "lucide-react";
 
@@ -14,7 +13,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen pt-28 pb-32">
+    <div className="min-h-screen bg-[#17211f] pt-28 pb-32">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-20">

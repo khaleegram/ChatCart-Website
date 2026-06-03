@@ -1,117 +1,69 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { UserPlus, Camera, MessageCircle, CreditCard, ArrowRight } from "lucide-react";
+import { CheckCircle2, CreditCard, Heart, MessageCircle, Video } from "lucide-react";
 
 const steps = [
   {
-    number: "01",
-    icon: UserPlus,
-    title: "Create Shop",
-    description: "Download the app and sign up in under 60 seconds. Verify your phone number to go live instantly.",
-    detail: "SMS Verification • Profile Setup",
+    icon: Video,
+    title: "Post a product story",
+    copy: "A seller uploads a video or photo gallery with caption, sound, location, and price details.",
   },
   {
-    number: "02",
-    icon: Camera,
-    title: "List Catalog",
-    description: "Snap photos or upload videos, write description captions, set prices, and tag your location.",
-    detail: "Videos • Hashtag SEO",
+    icon: Heart,
+    title: "Get discovered in the feed",
+    copy: "Buyers swipe through full-screen local products, then like, save, comment, or share.",
   },
   {
-    number: "03",
     icon: MessageCircle,
-    title: "Chat & Close",
-    description: "Buyers message you in-app. Agree on pricing, shipping logistics, and confirm the order securely.",
-    detail: "Chat Escrow • Safe Log",
+    title: "DM without losing context",
+    copy: "The chat opens with the exact product preview and a pre-filled message to the seller.",
   },
   {
-    number: "04",
     icon: CreditCard,
-    title: "Withdraw cash",
-    description: "Accept Paystack bank transfers, cards, or USSD. Funds go straight to your bank account payout.",
-    detail: "Paystack Out • Bank Transfer",
+    title: "Checkout with escrow",
+    copy: "Buyer location and delivery context feed into checkout, with funds held until confirmation.",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-28 overflow-hidden">
-      {/* Background glow orbs */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-[#A67C52]/4 blur-[120px] rounded-full pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto px-6">
-        
-        {/* Header Stack */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center lg:text-left mb-20"
-        >
-          <div className="inline-flex items-center gap-2 bg-[#A67C52]/10 border border-[#A67C52]/20 rounded-full px-4 py-1.5 mb-6">
-            <span className="text-[10px] font-black text-[#C49A6C] uppercase tracking-wider">Operational Flow</span>
+    <section id="how-it-works" className="bg-[#f4efe6] py-24">
+      <div className="section-wrap">
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p className="section-kicker">Swipe to sale</p>
+            <h2 className="display-title mt-3 text-4xl sm:text-5xl">No more TikTok-to-WhatsApp handoff.</h2>
+            <p className="muted-copy mt-5">
+              ChatCart keeps discovery, negotiation, delivery details, and payment inside one flow so buyers and sellers do not lose context.
+            </p>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white mb-5 leading-tight">
-            Up and selling in <span className="gradient-text-brand">four steps</span>
-          </h2>
-          <p className="text-base text-white/50 max-w-xl leading-relaxed">
-            We have simplified onboarding. No complicated setups, domains, or merchant compliance forms.
-          </p>
-        </motion.div>
 
-        {/* Steps Grid Timeline */}
-        <div className="relative">
-          
-          {/* Horizontal connecting line (desktop only) */}
-          <div className="absolute top-12 left-12 right-12 h-[2px] bg-gradient-to-r from-[#A67C52]/30 via-[#A67C52]/10 to-transparent hidden lg:block z-0" />
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-            {steps.map((step, i) => (
+          <div className="grid gap-4">
+            {steps.map(({ icon: Icon, title, copy }, index) => (
               <motion.div
-                key={step.number}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                key={title}
+                initial={{ opacity: 0, x: 18 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.55, delay: i * 0.1 }}
-                className="glass border border-white/5 rounded-3xl p-8 relative overflow-hidden group hover:border-[#A67C52]/20 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)] transition-all duration-300 flex flex-col justify-between"
+                transition={{ duration: 0.45, delay: index * 0.06 }}
+                className="grid gap-4 rounded-[28px] bg-white p-5 shadow-sm sm:grid-cols-[auto_1fr_auto] sm:items-center"
               >
-                {/* Massive outline background number */}
-                <span className="text-8xl font-black text-white/[0.02] absolute -right-2 -bottom-2 pointer-events-none select-none tracking-tighter">
-                  {step.number}
-                </span>
-
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f4eadf] text-[#A67C52]">
+                  <Icon size={21} />
+                </div>
                 <div>
-                  {/* Step Icon circle wrapper */}
-                  <div className="w-14 h-14 rounded-2xl bg-[#0c0a08] border border-[rgba(166,124,82,0.25)] flex items-center justify-center relative z-10 group-hover:border-[rgba(166,124,82,0.5)] group-hover:shadow-[0_0_30px_rgba(166,124,82,0.2)] transition-all duration-300 mb-6">
-                    <step.icon size={22} className="text-[#A67C52]" />
-                  </div>
-
-                  {/* Text details */}
-                  <h3 className="text-lg font-black text-white mb-2.5 flex items-center gap-2">
-                    <span className="text-xs text-[#A67C52] font-black">{step.number}.</span>
-                    {step.title}
-                  </h3>
-                  <p className="text-xs text-white/50 leading-relaxed mb-6">
-                    {step.description}
-                  </p>
+                  <p className="text-lg font-black text-[#17211f]">{title}</p>
+                  <p className="mt-1 text-sm font-medium leading-6 text-[#66746f]">{copy}</p>
                 </div>
-
-                {/* Subdetails list */}
-                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
-                  {step.detail.split(" • ").map((d) => (
-                    <span key={d} className="text-[9px] font-bold text-[#C49A6C] bg-[#A67C52]/10 border border-[#A67C52]/15 px-2.5 py-1 rounded-full">
-                      {d}
-                    </span>
-                  ))}
+                <div className="flex items-center gap-2 text-xs font-black text-[#A67C52]">
+                  <CheckCircle2 size={15} />
+                  {String(index + 1).padStart(2, "0")}
                 </div>
-
               </motion.div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

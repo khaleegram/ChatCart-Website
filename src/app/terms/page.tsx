@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen pt-28 pb-32">
+    <div className="min-h-screen bg-[#17211f] pt-28 pb-32">
       <div className="max-w-3xl mx-auto px-6">
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 glass-brand rounded-full px-4 py-2 mb-6">
