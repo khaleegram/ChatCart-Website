@@ -1,171 +1,200 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import { TrendingUp, Users, ShieldCheck, Star, Sparkles, Layers } from "lucide-react";
+import { motion } from "framer-motion";
+import { CreditCard, Film, MessageCircle, ShieldCheck, ShoppingBag, Sparkles } from "lucide-react";
 
-interface CounterProps {
-  end: number;
-  suffix?: string;
-  prefix?: string;
-  duration?: number;
+function ReelsFeedSimulation() {
+  return (
+    <div className="relative h-24 w-full overflow-hidden rounded-2xl bg-[#fcfaf8] border border-black/5 flex items-center justify-center">
+      <motion.div
+        className="flex flex-col gap-2.5 w-[85%]"
+        animate={{ y: [0, -50, -100, 0] }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+          times: [0, 0.3, 0.65, 1],
+        }}
+      >
+        {[
+          { label: "Summer Abaya", price: "₦28,000" },
+          { label: "Silk Hijab", price: "₦8,500" },
+          { label: "Modest Gown", price: "₦35,000" },
+          { label: "Summer Abaya", price: "₦28,000" },
+        ].map((item, i) => (
+          <div
+            key={i}
+            className="h-10 rounded-xl bg-white shadow-sm border border-black/5 px-3 flex items-center gap-2.5"
+          >
+            <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[#C49A6C] to-[#8B623E] shrink-0 flex items-center justify-center text-[10px] text-white font-black">
+              👗
+            </div>
+            <div className="flex-grow min-w-0">
+              <p className="text-[9px] font-black text-[#17211f] truncate leading-none">{item.label}</p>
+              <p className="text-[8px] font-bold text-[#A67C52] mt-0.5 leading-none">{item.price}</p>
+            </div>
+            <div className="w-3 h-3 rounded-full bg-[#17211f]/5 flex items-center justify-center shrink-0">
+              <Sparkles size={6} className="text-[#A67C52]" />
+            </div>
+          </div>
+        ))}
+      </motion.div>
+      <div className="absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-[#fcfaf8] to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-[#fcfaf8] to-transparent pointer-events-none" />
+    </div>
+  );
 }
 
-function Counter({ end, suffix = "", prefix = "", duration = 2 }: CounterProps) {
-  const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!inView) return;
-    let startTime: number;
-    const step = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.floor(eased * end));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [inView, end, duration]);
-
+function ContextDMSimulation() {
   return (
-    <span ref={ref}>
-      {prefix}{count.toLocaleString()}{suffix}
-    </span>
+    <div className="relative h-24 w-full overflow-hidden rounded-2xl bg-[#fcfaf8] border border-black/5 p-3 flex flex-col justify-end gap-2">
+      {/* Buyer bubble */}
+      <motion.div
+        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+        animate={{
+          opacity: [0, 1, 1, 0],
+          y: [10, 0, 0, -5],
+          scale: [0.95, 1, 1, 0.95],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          times: [0, 0.15, 0.8, 1],
+        }}
+        className="self-start max-w-[85%] rounded-2xl rounded-tl-none bg-white px-3 py-2 text-[9px] font-bold text-[#17211f] shadow-sm border border-black/5 leading-relaxed"
+      >
+        Is this Abaya in stock?
+      </motion.div>
+      {/* Seller bubble */}
+      <motion.div
+        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+        animate={{
+          opacity: [0, 0, 1, 0],
+          y: [10, 10, 0, -5],
+          scale: [0.95, 0.95, 1, 0.95],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          times: [0, 0.4, 0.8, 1],
+        }}
+        className="self-end max-w-[85%] rounded-2xl rounded-tr-none bg-[#17211f] px-3 py-2 text-[9px] font-bold text-white shadow-sm leading-relaxed"
+      >
+        Yes! Auto-filled order ready.
+      </motion.div>
+    </div>
+  );
+}
+
+function EscrowSimulation() {
+  return (
+    <div className="relative h-24 w-full overflow-hidden rounded-2xl bg-[#fcfaf8] border border-black/5 flex items-center justify-center">
+      <div className="relative flex items-center justify-center w-12 h-12">
+        {/* Pulse rings */}
+        <motion.div
+          className="absolute inset-0 rounded-full border border-emerald-500/40"
+          animate={{ scale: [0.8, 1.8], opacity: [1, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeOut" }}
+        />
+        <motion.div
+          className="absolute inset-0 rounded-full border border-emerald-500/25"
+          animate={{ scale: [0.8, 2.3], opacity: [1, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeOut", delay: 0.7 }}
+        />
+        <div className="relative z-10 w-11 h-11 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600 border border-emerald-500/20 shadow-inner">
+          <ShieldCheck size={20} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SellInstantlySimulation() {
+  return (
+    <div className="relative h-24 w-full overflow-hidden rounded-2xl bg-[#fcfaf8] border border-black/5 flex items-center justify-center">
+      <div className="relative w-[85%] h-[80%] rounded-xl bg-white shadow-sm border border-black/5 overflow-hidden flex items-center justify-center">
+        {/* Simulating a blurry storefront image */}
+        <div className="absolute inset-0 bg-cover bg-center opacity-65 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.1),rgba(0,0,0,0.3)),url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=200')]" />
+        
+        {/* Glowing Price Badge */}
+        <motion.div
+          className="relative z-10 flex items-center gap-1.5 rounded-full bg-[#17211f] text-white px-3 py-1.5 text-[9px] font-black shadow-lg border border-white/20"
+          animate={{ y: [0, -4, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <ShoppingBag size={10} className="text-[#C49A6C]" />
+          <span>₦15,000</span>
+        </motion.div>
+      </div>
+    </div>
   );
 }
 
 export function Statistics() {
+  const pillars = [
+    {
+      sim: <ReelsFeedSimulation />,
+      label: "Swipe & Shop",
+      headline: "Reels Feed",
+      sub: "Explore products through engaging full-screen video stories.",
+    },
+    {
+      sim: <ContextDMSimulation />,
+      label: "Smart Chat",
+      headline: "Context DM",
+      sub: "Send direct messages with item details automatically attached.",
+    },
+    {
+      sim: <EscrowSimulation />,
+      label: "Escrow Protected",
+      headline: "Safe Checkout",
+      sub: "Payments are held securely in escrow until delivery is confirmed.",
+    },
+    {
+      sim: <SellInstantlySimulation />,
+      label: "Sell Instantly",
+      headline: "Zero Setup",
+      sub: "Turn reels and media posts into shoppable items in seconds.",
+    },
+  ];
+
   return (
-    <section className="relative py-28 overflow-hidden">
-      {/* Background aesthetics */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0c0a08] via-[#0f0d0b] to-[#0c0a08]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[350px] bg-[#A67C52]/5 blur-[150px] pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          {/* Left Block: Narrative Summary */}
-          <div className="lg:col-span-4 text-center lg:text-left mb-8 lg:mb-0">
-            <div className="inline-flex items-center gap-2 bg-[#A67C52]/10 border border-[#A67C52]/20 rounded-full px-3.5 py-1.5 mb-5">
-              <Sparkles size={12} className="text-[#C49A6C]" />
-              <span className="text-[10px] font-bold text-[#C49A6C] uppercase tracking-wider">Live Platform Telemetry</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-white mb-5 leading-tight">
-              Numbers that <br />
-              <span className="gradient-text-brand">define scale</span>
-            </h2>
-            <p className="text-white/50 text-base leading-relaxed max-w-md mx-auto lg:mx-0">
-              ChatCart is powering a new era of mobile-first African commerce, providing a secure, high-uptime digital engine for active merchants.
-            </p>
-            <div className="mt-8 hidden lg:flex items-center gap-4 text-xs font-semibold text-white/30">
-              <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" /> Platform online</span>
-              <span>•</span>
-              <span>Updated live via Firebase telemetry</span>
-            </div>
-          </div>
-
-          {/* Right Block: Bento Telemetry Grid */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-6 gap-5">
-            
-            {/* Active Sellers Widget - Double Size */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="sm:col-span-4 bento-glow glass-brand rounded-3xl p-8 relative overflow-hidden border border-[#A67C52]/10 group hover:border-[#A67C52]/30 transition-all duration-300"
+    <section className="py-16 bg-white border-y border-black/5">
+      <div className="section-wrap">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {pillars.map(({ sim, label, headline, sub }) => (
+            <div
+              key={label}
+              className="group rounded-[30px] border border-black/5 bg-white p-5 hover:border-[#C49A6C]/30 hover:shadow-2xl hover:shadow-[#A67C52]/5 transition-all duration-300 flex flex-col"
             >
-              <div className="absolute right-0 bottom-0 w-32 h-32 bg-gradient-to-tr from-[#A67C52]/10 to-transparent pointer-events-none rounded-full blur-xl" />
-              <div className="flex justify-between items-start">
-                <div className="w-10 h-10 rounded-xl bg-[#A67C52]/15 border border-[#A67C52]/20 flex items-center justify-center text-[#C49A6C]">
-                  <Users size={18} />
-                </div>
-                <span className="text-[10px] font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full uppercase tracking-wider">
-                  +12% MoM
+              {/* Interactive Visual Simulation Header */}
+              <div className="mb-4">{sim}</div>
+
+              {/* Title / Description */}
+              <div className="mt-2 flex-grow">
+                <span className="text-[10px] font-black uppercase tracking-[0.14em] text-[#A67C52]">
+                  {label}
                 </span>
-              </div>
-              <div className="mt-6">
-                <p className="text-4xl sm:text-5xl font-black text-white tracking-tight">
-                  <Counter end={10000} suffix="+" duration={2} />
+                <p className="mt-1 text-lg font-black text-[#17211f] group-hover:text-[#A67C52] transition-colors duration-200">
+                  {headline}
                 </p>
-                <p className="text-sm font-bold text-white/90 mt-2">Active Mobile Sellers</p>
-                <p className="text-xs text-white/40 mt-1">Merchants scaling their businesses on Android and iOS.</p>
-              </div>
-            </motion.div>
-
-            {/* Success Rate Widget - Normal Size */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="sm:col-span-2 bento-glow glass rounded-3xl p-6 border border-white/5 group hover:border-white/15 transition-all duration-300 flex flex-col justify-between"
-            >
-              <div className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                <ShieldCheck size={16} />
-              </div>
-              <div className="mt-8">
-                <p className="text-3xl font-black text-white">
-                  <Counter end={98} suffix="%" duration={1.8} />
+                <p className="mt-2 text-xs font-semibold leading-relaxed text-[#66746f]">
+                  {sub}
                 </p>
-                <p className="text-xs font-bold text-white/80 mt-1.5">Payment Success</p>
-                <p className="text-[10px] text-white/40 mt-0.5">PCI secure via Paystack.</p>
               </div>
-            </motion.div>
-
-            {/* Products Listed Widget - Normal Size */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="sm:col-span-2 bento-glow glass rounded-3xl p-6 border border-white/5 group hover:border-white/15 transition-all duration-300 flex flex-col justify-between"
-            >
-              <div className="w-9 h-9 rounded-xl bg-[#A67C52]/10 border border-[#A67C52]/20 flex items-center justify-center text-[#C49A6C]">
-                <Layers size={16} />
-              </div>
-              <div className="mt-8">
-                <p className="text-3xl font-black text-white">
-                  <Counter end={50000} suffix="+" duration={2.2} />
-                </p>
-                <p className="text-xs font-bold text-white/80 mt-1.5">Catalog Items</p>
-                <p className="text-[10px] text-white/40 mt-0.5">Listed across categories.</p>
-              </div>
-            </motion.div>
-
-            {/* App Rating Widget - Double Size */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="sm:col-span-4 bento-glow glass-brand rounded-3xl p-8 border border-[#A67C52]/10 group hover:border-[#A67C52]/30 transition-all duration-300"
-            >
-              <div className="absolute right-0 bottom-0 w-32 h-32 bg-gradient-to-tr from-amber-500/5 to-transparent pointer-events-none rounded-full blur-xl" />
-              <div className="flex justify-between items-start">
-                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-                  <Star size={18} className="fill-amber-400" />
-                </div>
-                <div className="flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, idx) => (
-                    <Star key={idx} size={10} className="text-amber-400 fill-amber-400" />
-                  ))}
-                </div>
-              </div>
-              <div className="mt-6">
-                <p className="text-4xl sm:text-5xl font-black text-white tracking-tight">
-                  4.9<span className="text-sm font-medium text-white/40"> / 5.0</span>
-                </p>
-                <p className="text-sm font-bold text-white/90 mt-2">App Store & Play Store Rating</p>
-                <p className="text-xs text-white/40 mt-1">Voted by thousands of buyers and sellers nationwide.</p>
-              </div>
-            </motion.div>
-
-          </div>
-        </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
 }
+
