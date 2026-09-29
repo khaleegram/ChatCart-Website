@@ -27,32 +27,32 @@ Sign-in is required to buy, sell or message.
 
 ## Key pages
 
-- [Home](https://chatcart.app/): what ChatCart is and how to get the app.
-- [How it works](https://chatcart.app/how-it-works): the full buyer and seller journey, order states and timings.
-- [Escrow](https://chatcart.app/escrow): how the payment hold works, disputes, refunds and fees.
-- [Marketplace chat](https://chatcart.app/chat): messaging that carries the item, photos and price into the thread.
-- [Offers](https://chatcart.app/offers): offers, counter-offers, 72-hour expiry and agreed pricing.
-- [Social commerce](https://chatcart.app/social-commerce): how discovery works and where the DM-to-payment handover fails.
-- [For sellers](https://chatcart.app/for-sellers): listing, order management, commission and payouts.
-- [For buyers](https://chatcart.app/for-buyers): paying safely, confirming delivery and raising a dispute.
-- [FAQ](https://chatcart.app/faq): short answers on payments, delivery, refunds and payouts.
+- [Home](https://chatcart.shop/): what ChatCart is and how to get the app.
+- [How it works](https://chatcart.shop/how-it-works): the full buyer and seller journey, order states and timings.
+- [Escrow](https://chatcart.shop/escrow): how the payment hold works, disputes, refunds and fees.
+- [Marketplace chat](https://chatcart.shop/chat): messaging that carries the item, photos and price into the thread.
+- [Offers](https://chatcart.shop/offers): offers, counter-offers, 72-hour expiry and agreed pricing.
+- [Social commerce](https://chatcart.shop/social-commerce): how discovery works and where the DM-to-payment handover fails.
+- [For sellers](https://chatcart.shop/for-sellers): listing, order management, commission and payouts.
+- [For buyers](https://chatcart.shop/for-buyers): paying safely, confirming delivery and raising a dispute.
+- [FAQ](https://chatcart.shop/faq): short answers on payments, delivery, refunds and payouts.
 
 ## Comparisons
 
-- [vs WhatsApp](https://chatcart.app/compare/whatsapp)
-- [vs Instagram selling](https://chatcart.app/compare/instagram)
-- [vs selling from TikTok](https://chatcart.app/compare/tiktok)
-- [vs fixed-price marketplaces](https://chatcart.app/compare/fixed-price-marketplaces)
-- [vs a standalone store](https://chatcart.app/compare/own-website)
+- [vs WhatsApp](https://chatcart.shop/compare/whatsapp)
+- [vs Instagram selling](https://chatcart.shop/compare/instagram)
+- [vs selling from TikTok](https://chatcart.shop/compare/tiktok)
+- [vs fixed-price marketplaces](https://chatcart.shop/compare/fixed-price-marketplaces)
+- [vs a standalone store](https://chatcart.shop/compare/own-website)
 
 ## Glossary
 
-- [Social commerce](https://chatcart.app/glossary/social-commerce)
-- [Conversational commerce](https://chatcart.app/glossary/conversational-commerce)
-- [Escrow account](https://chatcart.app/glossary/escrow-account)
-- [Buyer protection](https://chatcart.app/glossary/buyer-protection)
-- [Video commerce](https://chatcart.app/glossary/video-commerce)
-- [Payment gateway](https://chatcart.app/glossary/payment-gateway)
+- [Social commerce](https://chatcart.shop/glossary/social-commerce)
+- [Conversational commerce](https://chatcart.shop/glossary/conversational-commerce)
+- [Escrow account](https://chatcart.shop/glossary/escrow-account)
+- [Buyer protection](https://chatcart.shop/glossary/buyer-protection)
+- [Video commerce](https://chatcart.shop/glossary/video-commerce)
+- [Payment gateway](https://chatcart.shop/glossary/payment-gateway)
 
 ## Coverage
 

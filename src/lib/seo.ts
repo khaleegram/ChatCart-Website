@@ -12,7 +12,7 @@ import type { Metadata } from "next";
  *    cannot keep.
  */
 
-const RAW_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://chatcart.app";
+const RAW_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://chatcart.shop";
 
 export const SITE = {
   name: "ChatCart",
