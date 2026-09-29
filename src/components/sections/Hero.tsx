@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, MessageCircle, ShieldCheck, Sparkles, ShoppingBag } from "lucide-react";
+import { ArrowRight, ShieldCheck, Sparkles, ShoppingBag } from "lucide-react";
 
 /**
  * Inline 16px-wide placeholder so the phone shows the feed's dark shape
@@ -44,32 +44,6 @@ function FeedPhone() {
 function FloatingCards() {
   return (
     <>
-      {/* Top Left: Chat Context */}
-      <motion.div
-        animate={{ y: [0, -15, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -left-20 top-20 z-30 hidden lg:block"
-        style={{ transform: "translateZ(80px)" }}
-      >
-        <div className="soft-panel w-[240px] rounded-3xl p-5 shadow-2xl bg-white/95 backdrop-blur-xl border border-white/40">
-          <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f4eadf] text-[#8B623E]">
-              <MessageCircle size={18} />
-            </div>
-            <div>
-              <p className="text-sm font-black text-[#17211f]">Instant Context</p>
-              <p className="text-[11px] font-bold text-[#66746f]">DMs are auto-filled</p>
-            </div>
-          </div>
-          <div className="mt-4 rounded-2xl bg-[#17211f] p-3 text-white relative">
-             <div className="absolute -top-1.5 left-4 w-3 h-3 bg-[#17211f] rotate-45" />
-             <p className="text-[11px] font-medium text-white/90 leading-relaxed relative z-10">
-               "Hi, I saw this Abaya piece on your feed. Is it available in size M?"
-             </p>
-          </div>
-        </div>
-      </motion.div>
-
       {/* Bottom Right: Escrow Shield */}
       <motion.div
         animate={{ y: [0, 15, 0] }}
