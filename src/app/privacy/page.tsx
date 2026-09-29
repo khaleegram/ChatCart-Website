@@ -1,10 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy — ChatCart",
-  description: "ChatCart Privacy Policy — how we collect, use, and protect your personal data.",
-};
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Privacy Policy",
+  description:
+    "How ChatCart collects, uses, stores and shares personal data, including chat messages, order records and payment details, and how to exercise your rights.",
+  path: "/privacy",
+  keywords: ["ChatCart privacy policy", "ChatCart data protection", "marketplace privacy Nigeria"],
+});
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (

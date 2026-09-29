@@ -3,14 +3,21 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, ShoppingBag, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
+import { Logo } from "@/components/brand/Logo";
+
+/**
+ * Anchors are absolute ("/#features") so they still work from the landing,
+ * glossary, comparison and city pages. A bare "#features" only resolves on the
+ * home page, which silently breaks navigation everywhere else.
+ */
 const navLinks = [
-  { label: "App preview", href: "#app-preview" },
-  { label: "Features", href: "#features" },
-  { label: "Flow", href: "#how-it-works" },
-  { label: "Trust", href: "#security" },
-  { label: "FAQ", href: "#faq" },
+  { label: "App preview", href: "/#app-preview" },
+  { label: "How it works", href: "/how-it-works" },
+  { label: "Escrow", href: "/escrow" },
+  { label: "For sellers", href: "/for-sellers" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export function Navbar() {
@@ -34,13 +41,8 @@ export function Navbar() {
         }`}
       >
         <nav className="section-wrap h-[72px] flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5" id="nav-logo">
-            <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#17211f] text-white shadow-sm">
-              <ShoppingBag size={18} />
-            </span>
-            <span className="text-xl font-black tracking-tight text-[#17211f]">
-              Chat<span className="text-[#A67C52]">Cart</span>
-            </span>
+          <Link href="/" className="flex items-center gap-2.5" id="nav-logo" aria-label="ChatCart home">
+            <Logo />
           </Link>
 
           <div className="hidden items-center gap-1 md:flex">
@@ -55,9 +57,13 @@ export function Navbar() {
             ))}
           </div>
 
-          <a href="#download" className="btn-primary hidden px-5 py-2.5 text-sm md:inline-flex" id="nav-cta">
-            View app
-          </a>
+          <Link
+            href="/#download"
+            className="btn-primary hidden px-5 py-2.5 text-sm md:inline-flex"
+            id="nav-cta"
+          >
+            Get the app
+          </Link>
 
           <button
             type="button"
@@ -78,7 +84,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="fixed inset-x-4 top-20 z-40 rounded-3xl border border-[rgba(23,33,31,0.1)] bg-white/95 p-3 shadow-2xl backdrop-blur-xl md:hidden"
+            className="fixed inset-x-4 top-20 z-40 max-h-[75vh] overflow-y-auto rounded-3xl border border-[rgba(23,33,31,0.1)] bg-white/95 p-3 shadow-2xl backdrop-blur-xl md:hidden"
           >
             {navLinks.map((link) => (
               <Link
@@ -90,13 +96,13 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="#download"
+            <Link
+              href="/#download"
               className="btn-primary mt-2 w-full px-5 py-3 text-sm"
               onClick={() => setMobileOpen(false)}
             >
-              View app
-            </a>
+              Get the app
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

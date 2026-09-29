@@ -1,10 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Terms of Service — ChatCart",
-  description: "ChatCart Terms of Service — the rules governing use of our platform.",
-};
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Terms of Service",
+  description:
+    "The rules governing use of ChatCart: accounts, listings, escrow payments, commission, payouts, prohibited items and dispute handling.",
+  path: "/terms",
+  keywords: ["ChatCart terms of service", "marketplace terms Nigeria", "escrow terms of service"],
+});
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (

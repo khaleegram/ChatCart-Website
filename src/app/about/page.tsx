@@ -2,11 +2,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "About ChatCart - Social Commerce for Local Sellers",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Why We Built a Chat-First Marketplace With Escrow",
   description:
-    "Learn how ChatCart turns short-form product discovery into contextual chat, escrow checkout, and local delivery.",
-};
+    "ChatCart turns short-form product discovery into contextual chat, agreed prices and escrow-protected checkout for buyers and local sellers in Nigeria.",
+  path: "/about",
+  keywords: [
+    "about ChatCart",
+    "chat-first marketplace Nigeria",
+    "escrow marketplace Nigeria",
+    "who owns ChatCart",
+  ],
+});
 
 export default function AboutPage() {
   return (

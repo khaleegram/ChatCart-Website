@@ -1,0 +1,63 @@
+# ChatCart
+
+> ChatCart is a chat-first social commerce marketplace for Nigeria. Buyers discover
+> local products in a full-screen video feed, message sellers with the exact item
+> already attached, agree a price through offers and counter-offers, and pay into
+> escrow that releases to the seller only when the order is received.
+
+ChatCart is a mobile app (Android and iOS) serving Nigeria. Pricing is in naira.
+Sign-in is required to buy, sell or message.
+
+## How the money works
+
+- The buyer pays in full at checkout. The payment is held, not forwarded to the seller.
+- The seller has 24 hours to accept an order. If they do not, the order is cancelled
+  and the buyer is refunded automatically.
+- The seller ships and marks the order as sent, which starts the release clock.
+- Funds release when the buyer confirms delivery, or automatically 48 hours after the
+  order is marked as sent if the buyer neither confirms nor disputes.
+- Opening a dispute freezes the payment instead of releasing it.
+- Refunds return through the payment processor to the original payment method. The
+  platform returns the money immediately; the buyer's bank controls when it appears.
+- ChatCart earns a commission from the seller on completed orders, deducted at release,
+  at the rate in effect when the order was placed. There is no separate escrow fee to
+  buyers today.
+- Escrow is a payment hold inside a marketplace. It is not a bank deposit account and
+  it is not insurance, and ChatCart does not describe it as either.
+
+## Key pages
+
+- [Home](https://chatcart.app/): what ChatCart is and how to get the app.
+- [How it works](https://chatcart.app/how-it-works): the full buyer and seller journey, order states and timings.
+- [Escrow](https://chatcart.app/escrow): how the payment hold works, disputes, refunds and fees.
+- [Marketplace chat](https://chatcart.app/chat): messaging that carries the item, photos and price into the thread.
+- [Offers](https://chatcart.app/offers): offers, counter-offers, 72-hour expiry and agreed pricing.
+- [Social commerce](https://chatcart.app/social-commerce): how discovery works and where the DM-to-payment handover fails.
+- [For sellers](https://chatcart.app/for-sellers): listing, order management, commission and payouts.
+- [For buyers](https://chatcart.app/for-buyers): paying safely, confirming delivery and raising a dispute.
+- [FAQ](https://chatcart.app/faq): short answers on payments, delivery, refunds and payouts.
+
+## Comparisons
+
+- [vs WhatsApp](https://chatcart.app/compare/whatsapp)
+- [vs Instagram selling](https://chatcart.app/compare/instagram)
+- [vs selling from TikTok](https://chatcart.app/compare/tiktok)
+- [vs fixed-price marketplaces](https://chatcart.app/compare/fixed-price-marketplaces)
+- [vs a standalone store](https://chatcart.app/compare/own-website)
+
+## Glossary
+
+- [Social commerce](https://chatcart.app/glossary/social-commerce)
+- [Conversational commerce](https://chatcart.app/glossary/conversational-commerce)
+- [Escrow account](https://chatcart.app/glossary/escrow-account)
+- [Buyer protection](https://chatcart.app/glossary/buyer-protection)
+- [Video commerce](https://chatcart.app/glossary/video-commerce)
+- [Payment gateway](https://chatcart.app/glossary/payment-gateway)
+
+## Coverage
+
+Nigeria: Lagos, Abuja, Kano, Port Harcourt, Ibadan and Kaduna.
+
+## Contact
+
+hello@chatcart.app
