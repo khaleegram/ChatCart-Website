@@ -1,80 +1,42 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Bookmark,
-  Heart,
-  MapPin,
-  MessageCircle,
-  Music,
-  Send,
-  ShieldCheck,
-  Sparkles,
-  ShoppingBag,
-} from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, MessageCircle, ShieldCheck, Sparkles, ShoppingBag } from "lucide-react";
 
+/**
+ * Inline 16px-wide placeholder so the phone shows the feed's dark shape
+ * immediately instead of a blank box while the real image downloads.
+ */
+const PREVIEW_BLUR =
+  "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAwBQCdASoQACEAPu1eqE2ppSOiNVgIATAdiUAZZc2A68MNvzHJ385UBpm77lgdiUGCaAD++RfyLgIIrNG+XJ56wlN803p6W/kLTT3hmKo/PcUJipWDh6TlonYJNkdcBb7sjEqDN5TWCvE7GAAO+Mm60J3zsaFLplJ/ftW3o4o6qRDw2BclEAV/Z9fSRH0ddF6harsoe/vCLIY+xOsjkxFYS2dLYKAzSXdSVv286nv2sZ0GAk4Qn4AW5qVaNEuAAAA=";
+
+/**
+ * The hero phone: a real screenshot of the app, not a drawn mock.
+ *
+ * The image supplies the height (`h-auto`) and the frame follows it, instead of
+ * being forced into a fixed 620px box. A real capture is taller than the old
+ * hand-drawn mock was, and a fixed box would have cropped the Android status bar
+ * and the bottom navigation off — so the frame is sized by the capture, and what
+ * you see is the whole screen.
+ *
+ * The bezel comes from `.phone-shell` in globals.css (34px radius, 8px ink
+ * border, clipped), so the image needs no rounding of its own.
+ */
 function FeedPhone() {
   return (
-    <div className="phone-shell w-[315px] max-w-full relative shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] rounded-[26px]">
-      <div className="relative min-h-[620px] overflow-hidden rounded-[26px] bg-[#0c0a08] text-white ring-1 ring-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_20%,rgba(196,154,108,0.42),transparent_28%),linear-gradient(160deg,#2b2119_0%,#11100f_44%,#050505_100%)]" />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/70 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-black via-black/70 to-transparent" />
-
-        <div className="relative z-10 flex items-center justify-between px-4 pt-4">
-          <div className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[11px] font-black backdrop-blur-md">
-            For You
-          </div>
-          <div className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[11px] font-bold text-white/70 backdrop-blur-md">
-            Kano
-          </div>
-        </div>
-
-        <div className="absolute right-4 top-36 z-10 flex flex-col items-center gap-5">
-          <div className="rounded-full bg-gradient-to-br from-[#C49A6C] to-[#8B623E] p-[3px]">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#15110d] text-sm font-black">
-              LS
-            </div>
-          </div>
-          {[
-            { icon: Heart, label: "12.8k" },
-            { icon: MessageCircle, label: "340" },
-            { icon: Bookmark, label: "Save" },
-            { icon: Send, label: "Share" },
-          ].map(({ icon: Icon, label }) => (
-            <div key={label} className="flex flex-col items-center gap-1">
-              <button className="flex h-11 w-11 items-center justify-center rounded-full bg-black/35 backdrop-blur-md">
-                <Icon size={20} fill={label === "12.8k" ? "currentColor" : "none"} />
-              </button>
-              <span className="text-[10px] font-black text-white/85">{label}</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 z-10 p-4 pr-20">
-          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-black/35 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-[#C49A6C] backdrop-blur-md">
-            <Music size={12} />
-            seller sound
-          </div>
-          <p className="text-lg font-black leading-tight">Handmade Abaya two-piece, available today</p>
-          <p className="mt-2 text-xs font-semibold leading-5 text-white/72">
-            @lola.styles_ng - Swipe into the full product story, ask questions, or checkout with escrow.
-          </p>
-          <div className="mt-3 flex items-center gap-2 text-xs font-bold text-white/70">
-            <MapPin size={13} className="text-[#C49A6C]" />
-            Kano
-          </div>
-          <div className="mt-4 flex gap-2">
-            <button className="flex-1 rounded-full bg-[#A67C52] px-4 py-3 text-sm font-black text-white shadow-[0_12px_30px_rgba(166,124,82,0.35)]">
-              Buy N38,000
-            </button>
-            <button className="rounded-full border border-white/18 bg-white/12 px-5 py-3 text-sm font-black backdrop-blur-md">
-              DM
-            </button>
-          </div>
-        </div>
-      </div>
+    <div className="phone-shell relative w-[315px] max-w-full shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
+      <Image
+        src="/app-preview.webp"
+        alt="The ChatCart app: a seller's store in the video feed, with the product, its price in naira and a Buy button"
+        width={720}
+        height={1468}
+        priority
+        placeholder="blur"
+        blurDataURL={PREVIEW_BLUR}
+        sizes="300px"
+        className="block h-auto w-full"
+      />
     </div>
   );
 }
