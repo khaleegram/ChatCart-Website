@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Mail, MessageCircle, MapPin, Send } from "lucide-react";
 
+import { SITE } from "@/lib/seo";
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -32,7 +34,7 @@ export default function ContactPage() {
           {/* Left: contact info */}
           <div className="space-y-6">
             {[
-              { icon: Mail, title: "Email Support", detail: "hello@chatcart.app", sub: "We reply within 24 hours" },
+              { icon: Mail, title: "Email Support", detail: SITE.email, sub: "We reply within 24 hours" },
               { icon: MessageCircle, title: "In-App Support", detail: "Use the Help section in ChatCart", sub: "Fastest response time" },
               { icon: MapPin, title: "Location", detail: "Nigeria 🇳🇬", sub: "Serving all 36 states" },
             ].map(({ icon: Icon, title, detail, sub }) => (
@@ -50,8 +52,8 @@ export default function ContactPage() {
 
             <div className="glass-brand rounded-2xl p-6 border border-[#A67C52]/20 mt-8">
               <p className="text-white font-bold mb-2">For partnerships & press</p>
-              <a href="mailto:partners@chatcart.app" className="text-[#A67C52] hover:text-[#C49A6C] text-sm font-semibold transition-colors">
-                partners@chatcart.app
+              <a href={`mailto:${SITE.email}`} className="text-[#A67C52] hover:text-[#C49A6C] text-sm font-semibold transition-colors">
+                {SITE.email}
               </a>
             </div>
           </div>

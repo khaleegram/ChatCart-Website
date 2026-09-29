@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, SITE } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Terms of Service",
@@ -85,7 +85,7 @@ export default function TermsPage() {
         </Section>
 
         <Section title="12. Contact">
-          <p>For terms-related queries: <a href="mailto:legal@chatcart.app" className="text-[#A67C52] hover:text-[#C49A6C] transition-colors">legal@chatcart.app</a></p>
+                      <p>For terms-related queries: <a href={`mailto:${SITE.email}`} className="text-[#A67C52] hover:text-[#C49A6C] transition-colors">{SITE.email}</a></p>
         </Section>
       </div>
     </div>

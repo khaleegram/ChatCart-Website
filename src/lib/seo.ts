@@ -27,10 +27,14 @@ export const SITE = {
     "ChatCart is a social commerce marketplace: discover products in a video feed, agree the price in chat, and pay into escrow.",
   longDescription:
     "ChatCart is a chat-first social commerce marketplace for Nigeria. Buyers discover local products in a full-screen video feed, message sellers with the exact item already attached, negotiate a price with offers and counter-offers, and pay into escrow that only releases once the order is received.",
-  email: "hello@chatcart.app",
-  supportEmail: "support@chatcart.app",
-  legalEmail: "legal@chatcart.app",
-  privacyEmail: "privacy@chatcart.app",
+  /**
+   * One address, deliberately. There is a single mailbox, so publishing
+   * support@/legal@/privacy@ variants would put three dead addresses on the
+   * privacy policy and terms — worse for a user than one address that works.
+   * If per-purpose mailboxes are ever set up, split them here and every page
+   * follows, because the pages read this rather than hardcoding it.
+   */
+  email: "hello@chatcart.shop",
   twitter: "@chatcartapp",
   /** Money model facts that appear in copy must come from here so they can't drift. */
   facts: {
@@ -320,7 +324,7 @@ export function organizationSchema(): Schema {
       {
         "@type": "ContactPoint",
         contactType: "customer support",
-        email: SITE.supportEmail,
+        email: SITE.email,
         areaServed: SITE.countryCode,
         availableLanguage: ["en"],
       },

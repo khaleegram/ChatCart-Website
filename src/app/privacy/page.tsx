@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, SITE } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
         </Section>
 
         <Section title="6. Data Retention">
-          <p>We retain your account data for as long as your account is active. Order and transaction data is retained for a minimum of 7 years for financial compliance. You may request deletion of your account and associated data by contacting us at privacy@chatcart.app.</p>
+                      <p>We retain your account data for as long as your account is active. Order and transaction data is retained for a minimum of 7 years for financial compliance. You may request deletion of your account and associated data by contacting us at {SITE.email}.</p>
         </Section>
 
         <Section title="7. Your Rights">
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
         </Section>
 
         <Section title="9. Contact">
-          <p>For privacy-related questions: <a href="mailto:privacy@chatcart.app" className="text-[#A67C52] hover:text-[#C49A6C] transition-colors">privacy@chatcart.app</a></p>
+                      <p>For privacy-related questions: <a href={`mailto:${SITE.email}`} className="text-[#A67C52] hover:text-[#C49A6C] transition-colors">{SITE.email}</a></p>
         </Section>
       </div>
     </div>

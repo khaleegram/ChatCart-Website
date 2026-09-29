@@ -5,6 +5,7 @@ import { Instagram, Mail, Twitter } from "lucide-react";
 import { GLOSSARY_TERMS } from "@/lib/content/glossary";
 import { COMPARISON_PAGES } from "@/lib/content/compare";
 import { CITY_PAGES } from "@/lib/content/cities";
+import { SITE } from "@/lib/seo";
 
 /**
  * The site's crawl hub.
@@ -84,7 +85,7 @@ export function Footer() {
               {[
                 { icon: Twitter, label: "Twitter", href: "#" },
                 { icon: Instagram, label: "Instagram", href: "#" },
-                { icon: Mail, label: "Email", href: "mailto:hello@chatcart.app" },
+                { icon: Mail, label: "Email", href: `mailto:${SITE.email}` },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
