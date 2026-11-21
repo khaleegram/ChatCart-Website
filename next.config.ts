@@ -8,10 +8,10 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    // The /Buyer Protection page and its glossary entry were replaced by Buyer Protection pages.
+    // The /escrow page and its glossary entry were replaced by the Buyer Protection pages.
     return [
-      { source: "/buyer-protection", destination: "/buyer-protection", permanent: true },
-      { source: "/glossary/buyer-protection", destination: "/glossary/buyer-protection", permanent: true },
+      { source: "/escrow", destination: "/buyer-protection", permanent: true },
+      { source: "/glossary/escrow-account", destination: "/glossary/buyer-protection", permanent: true },
     ];
   },
   experimental: {
