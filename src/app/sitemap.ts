@@ -27,7 +27,7 @@ const STATIC_PAGES: { path: string; priority: number; changeFrequency: Entry["ch
 
 /** The commercial pages carry the search demand, so they rank highest after the home page. */
 const LANDING_PRIORITY: Record<string, number> = {
-  escrow: 0.95,
+  "buyer-protection": 0.95,
   chat: 0.95,
   offers: 0.9,
   "for-sellers": 0.9,

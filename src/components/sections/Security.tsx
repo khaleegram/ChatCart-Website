@@ -24,14 +24,14 @@ const states: SecurityState[] = [
   { 
     icon: BadgeCheck, 
     title: "Seller verification", 
-    copy: "Seller profiles, locations, and escrow performance histories stay attached to the product reel.",
+    copy: "Seller profiles, locations, and order performance histories stay attached to the product reel.",
     details: "Kano & Lagos verified badge"
   },
   { 
     icon: LockKeyhole, 
     title: "Protected checkout", 
-    copy: "Checkout starts directly from the item, with funds held securely in escrow until you approve.",
-    details: "ChatCart Escrow System"
+    copy: "Checkout starts directly from the item, with funds held safely until you confirm delivery.",
+    details: "Buyer Protection"
   },
   { 
     icon: AlertTriangle, 
@@ -66,14 +66,14 @@ export function Security() {
             </h2>
             
             <p className="mt-5 text-[#889c96] font-medium leading-relaxed max-w-lg">
-              Buyers never leave the product reel to negotiate elsewhere. Seller identity, chat, checkout, escrow, and delivery confirmation stay bound together.
+              Buyers never leave the product reel to negotiate elsewhere. Seller identity, chat, checkout, Buyer Protection, and delivery confirmation stay bound together.
             </p>
 
             {/* Accent Card / Stats indicator */}
             <div className="mt-8 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex flex-col gap-1">
               <div className="flex items-center gap-2">
                 <Sparkles size={14} className="text-[#C49A6C]" />
-                <span className="text-[10px] font-black tracking-widest uppercase text-[#C49A6C]">Escrow Protection</span>
+                <span className="text-[10px] font-black tracking-widest uppercase text-[#C49A6C]">Buyer Protection</span>
               </div>
               <p className="text-xs font-bold text-white/90 leading-relaxed mt-1">
                 Zero naira fees on buyer protection. Funds are disbursed to sellers only when the buyer verifies delivery.
@@ -166,7 +166,7 @@ export function Security() {
                 </div>
               </div>
 
-              {/* Panel 1: Protected Escrow (Bottom Left) */}
+              {/* Panel 1: Protected Checkout (Bottom Left) */}
               <div 
                 onMouseEnter={() => setActiveFeature(1)}
                 onMouseLeave={() => setActiveFeature(null)}
@@ -179,10 +179,10 @@ export function Security() {
                 }`}>
                   <div className="flex items-center gap-2 mb-2">
                     <LockKeyhole size={14} className="text-[#C49A6C]" />
-                    <h3 className="font-extrabold text-[11px] uppercase tracking-wider text-white">Escrow Checkout</h3>
+                    <h3 className="font-extrabold text-[11px] uppercase tracking-wider text-white">Protected Checkout</h3>
                   </div>
                   <p className="text-[10px] font-medium leading-relaxed text-[#889c96]">
-                    Transactions deposit directly into locked escrow. Funds release only when delivery is verified.
+                    Transactions deposit directly into a protected hold. Funds release only when delivery is verified.
                   </p>
                 </div>
               </div>
@@ -248,11 +248,11 @@ export function Security() {
               <ShieldCheck size={18} />
             </div>
             <p className="font-black text-[#fcfaf8] text-sm sm:text-base">
-              Checkout state: Funds held securely in escrow until delivery confirmation.
+              Checkout state: Funds held safely until delivery is confirmed.
             </p>
           </div>
           <p className="mt-3 text-xs sm:text-sm font-bold text-[#889c96] sm:mt-0 tracking-wide">
-            Calm, visible, and 100% fraud-proof.
+            Calm, visible, and built around delivery confirmation.
           </p>
         </div>
 

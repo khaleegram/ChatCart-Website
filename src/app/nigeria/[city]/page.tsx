@@ -58,7 +58,7 @@ export default async function CityPage({ params }: Props) {
   // Every city links to every other city plus the core pages — this is what
   // makes the city set a hub rather than six orphaned pages.
   const related: RelatedLink[] = [
-    { label: "Escrow payments explained", path: "/escrow" },
+    { label: "Buyer Protection explained", path: "/buyer-protection" },
     { label: "Buying safely online", path: "/for-buyers" },
     { label: "Selling on ChatCart", path: "/for-sellers" },
     ...CITY_PAGES.filter((entry) => entry.slug !== page.slug).map((entry) => ({

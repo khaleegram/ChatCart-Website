@@ -42,8 +42,8 @@ const buyerSteps: Step[] = [
     insight: "No more sending screenshots or asking 'how much?'."
   },
   {
-    title: "Lock payment in escrow",
-    copy: "Pay safely inside the chat. Funds are secured by ChatCart Escrow. The seller is instantly notified and prompted to ship.",
+    title: "Pay securely in chat",
+    copy: "Pay safely inside the chat. Your payment is held safely until you confirm delivery. The seller is instantly notified and prompted to ship.",
     badge: "Buyer Flow / Step 3",
     insight: "Money is held securely; sellers can't run off with your cash."
   },
@@ -78,7 +78,7 @@ const sellerSteps: Step[] = [
     title: "Ship & get paid instantly",
     copy: "Receive shipping waybills, hand over the package, and get your payout directly to your bank account as soon as delivery is confirmed.",
     badge: "Seller Flow / Step 4",
-    insight: "Escrow guarantee: You are 100% sure the buyer paid before shipping."
+    insight: "Buyer Protection: you can see the buyer has paid before you ship."
   }
 ];
 
@@ -119,7 +119,7 @@ export function HowItWorks() {
             </h2>
             
             <p className="mt-5 text-[#889c96] font-medium leading-relaxed max-w-lg">
-              ChatCart brings discovery, checkout context, and escrow protections into one unified feed.
+              ChatCart brings discovery, checkout context, and Buyer Protection into one unified feed.
             </p>
 
             {/* Persona Switcher Pill */}
@@ -340,9 +340,9 @@ export function HowItWorks() {
                                 <div className="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center text-[#A67C52] shadow-inner mb-2 animate-pulse">
                                   <Shield size={24} />
                                 </div>
-                                <h4 className="font-black text-[11px] text-[#17211f]">ChatCart Escrow Pay</h4>
+                                <h4 className="font-black text-[11px] text-[#17211f]">ChatCart Checkout</h4>
                                 <p className="text-[8px] text-[#66746f] mt-1 px-1">
-                                  Funds locked safely. Released only when you verify package delivery.
+                                  Payment held safely. Released to the seller after you confirm delivery.
                                 </p>
                               </div>
 
@@ -357,14 +357,14 @@ export function HowItWorks() {
                                 </div>
                                 <div className="h-[1px] bg-[#eae6df]" />
                                 <div className="flex justify-between font-black text-[#17211f]">
-                                  <span>Total Escrow Lock</span>
+                                  <span>Total Payment</span>
                                   <span className="text-[#A67C52]">₦23,500</span>
                                 </div>
                               </div>
 
                               <div className="w-full bg-[#17211f] text-white py-2 rounded-xl text-[9px] font-black tracking-wider flex items-center justify-center gap-1">
                                 <Lock size={9} />
-                                <span>Confirm Escrow Lock</span>
+                                <span>Confirm Payment</span>
                               </div>
                             </motion.div>
                           )}
@@ -388,14 +388,14 @@ export function HowItWorks() {
                               </div>
 
                               <div className="w-full bg-amber-50/50 border border-amber-200/50 rounded-xl p-2 text-[8px] text-[#A67C52] font-semibold leading-relaxed">
-                                Please inspect the item now. If it fits perfectly, release the escrow below.
+                                Please inspect the item now. If it fits perfectly, confirm delivery below.
                               </div>
 
                               <div className="w-full space-y-1.5">
                                 <div className="w-full bg-[#A67C52] text-white py-2 rounded-xl text-[9px] font-black cursor-pointer">
                                   Release Payout to Seller
                                 </div>
-                                <p className="text-[7px] text-[#66746f] font-bold">Escrow Payout Complete</p>
+                                <p className="text-[7px] text-[#66746f] font-bold">Payout Complete</p>
                               </div>
                             </motion.div>
                           )}
@@ -429,8 +429,8 @@ export function HowItWorks() {
                                     </div>
                                   </div>
                                   <div className="bg-white border border-[#eae6df] rounded px-1.5 py-1 text-[7px]">
-                                    <p className="text-[5px] text-[#66746f] uppercase font-black">Escrow Guarantee</p>
-                                    <p className="font-bold text-emerald-600 truncate">Escrow Protected</p>
+                                    <p className="text-[5px] text-[#66746f] uppercase font-black">Buyer Protection</p>
+                                    <p className="font-bold text-emerald-600 truncate">Buyer Protection</p>
                                   </div>
                                 </div>
                               </div>
@@ -505,7 +505,7 @@ export function HowItWorks() {
                                 <div className="bg-white border border-[#eae6df] rounded-xl p-2 shadow-xs space-y-1">
                                   <div className="flex justify-between items-center">
                                     <span className="text-[7px] font-black text-[#A67C52]">STRUCTURED INQUIRY</span>
-                                    <span className="text-[6px] font-black text-white bg-emerald-600 px-1 py-0.2 rounded">ESCROW SECURED</span>
+                                    <span className="text-[6px] font-black text-white bg-emerald-600 px-1 py-0.2 rounded">BUYER PROTECTION</span>
                                   </div>
                                   <div className="h-[1px] bg-[#eae6df]" />
                                   <p className="text-[8px] font-black text-[#17211f]">Brown Linen Abaya (Size L)</p>
@@ -513,7 +513,7 @@ export function HowItWorks() {
                                 </div>
 
                                 <div className="bg-white border border-[#eae6df] p-2 rounded-2xl rounded-tl-none text-[8px] leading-relaxed self-start max-w-[85%] text-[#17211f] font-medium shadow-xs">
-                                  I have locked the ₦23,500 payment. Please dispatch to GIG Logistics.
+                                  I have paid the ₦23,500. Please dispatch to GIG Logistics.
                                 </div>
                               </div>
 
@@ -537,13 +537,13 @@ export function HowItWorks() {
                                 </div>
                                 <h4 className="font-black text-[11px] text-[#17211f]">Payout Released!</h4>
                                 <p className="text-[8px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full font-bold mt-1.5">
-                                  Completed Escrow #0921
+                                  Completed Order #0921
                                 </p>
                               </div>
 
                               <div className="w-full bg-white border border-[#eae6df] rounded-xl p-2.5 text-left text-[8px] space-y-1.5 shadow-xs">
                                 <div className="flex justify-between text-[#66746f]">
-                                  <span>Locked Escrow Balance</span>
+                                  <span>Payment Held</span>
                                   <span className="font-bold text-[#17211f]">₦22,000</span>
                                 </div>
                                 <div className="flex justify-between text-[#66746f]">

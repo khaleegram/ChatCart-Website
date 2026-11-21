@@ -77,7 +77,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
             kind: "text",
             paragraphs: [
               "The strength of social commerce is conversion. Buying something you were just shown, from a person you have some connection to, converts far better than a cold product search. Its weakness is trust infrastructure, because the same intimacy that makes the sale easy makes the payment feel informal.",
-              "That is the gap ChatCart is built for: keep the discovery and the conversation, and attach a recorded price and an escrow payment to them so the informal part stays casual and the money part does not.",
+              "That is the gap ChatCart is built for: keep the discovery and the conversation, and attach a recorded price and a protected payment to them so the informal part stays casual and the money part does not.",
             ],
           },
         ],
@@ -101,7 +101,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
       { label: "Social commerce in Nigeria", path: "/social-commerce" },
       { label: "What is conversational commerce?", path: "/glossary/conversational-commerce" },
       { label: "What is video commerce?", path: "/glossary/video-commerce" },
-      { label: "Escrow payments explained", path: "/escrow" },
+      { label: "Buyer Protection explained", path: "/buyer-protection" },
     ],
     updated: UPDATED,
   },
@@ -163,7 +163,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
             kind: "text",
             paragraphs: [
               "The conversation should be the interface, not a distraction from it. That means the item travels into the thread automatically, an offer is a structured action rather than a sentence, and the payment and its status are visible inside the same conversation that produced them.",
-              "On ChatCart a deal thread carries the item, the negotiated price, the escrow payment and the order status together, so the conversation is the transaction rather than a discussion about it.",
+              "On ChatCart a deal thread carries the item, the negotiated price, the protected payment and the order status together, so the conversation is the transaction rather than a discussion about it.",
             ],
           },
         ],
@@ -187,122 +187,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
       { label: "Marketplace chat on ChatCart", path: "/chat" },
       { label: "What is social commerce?", path: "/glossary/social-commerce" },
       { label: "Offers and negotiation", path: "/offers" },
-      { label: "Escrow payments explained", path: "/escrow" },
-    ],
-    updated: UPDATED,
-  },
-  {
-    slug: "escrow-account",
-    term: "Escrow account",
-    title: "What Is an Escrow Account? Definition and How It Works",
-    description:
-      "An escrow account holds money for a transaction until agreed conditions are met. Definition, who it protects, and how escrow works in online marketplaces.",
-    shortDefinition:
-      "An escrow account is an arrangement where a neutral third party holds money for a transaction and releases it only when the conditions both sides agreed have been met.",
-    keywords: [
-      "what is an escrow account",
-      "escrow account definition",
-      "how does escrow work",
-      "escrow meaning in business",
-      "escrow account vs savings account",
-    ],
-    sections: [
-      {
-        id: "definition",
-        heading: "The definition",
-        blocks: [
-          {
-            kind: "text",
-            paragraphs: [
-              "An escrow account is a holding arrangement. Instead of one party paying the other directly, the money is given to a neutral third party who holds it until a defined condition is satisfied, then releases it to whichever side the condition favours.",
-              "In property, the condition might be the completion of a sale. In a marketplace, it is simpler: the condition is that the buyer receives the goods, and the release is triggered by the buyer confirming, by a fixed waiting period expiring, or by the resolution of a dispute.",
-            ],
-          },
-          {
-            kind: "bullets",
-            items: [
-              "The buyer's money leaves their account immediately, so the seller knows the funds are real.",
-              "The seller does not receive the money until the condition is met, so the buyer is not exposed.",
-              "The third party controls the release, which is what makes the arrangement neutral rather than a favour to either side.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "not-a-bank-account",
-        heading: "An escrow arrangement is not a bank account",
-        blocks: [
-          {
-            kind: "text",
-            paragraphs: [
-              "It is common to describe escrow as “the money sitting in a safe account”, which implies more than most arrangements provide. An escrow hold is a contractual and operational arrangement about who may move the money and when — it is not a deposit account in the buyer's name, and it does not normally carry deposit insurance.",
-              "It is worth being precise about this, because the protection being offered is specific: the seller cannot take the money before the order is delivered, and either side can freeze the release by raising a dispute. That is a real and useful protection, and it is narrower than “your money is guaranteed”.",
-            ],
-          },
-          {
-            kind: "note",
-            title: "What escrow does and does not cover",
-            body: "Escrow protects the transaction from the other party. It does not insure the goods, and it does not turn a marketplace into a bank. Anyone promising the broader version is describing a product that does not exist.",
-          },
-        ],
-      },
-      {
-        id: "in-practice",
-        heading: "How escrow works in a marketplace",
-        blocks: [
-          {
-            kind: "steps",
-            steps: [
-              {
-                title: "Payment is made into the hold",
-                body: "The buyer pays the platform rather than the seller. The seller can see the order is paid, which is what gives them the confidence to ship.",
-              },
-              {
-                title: "The seller performs",
-                body: "The seller accepts the order and dispatches the item, marking it as sent. In most marketplace escrow flows this starts a clock.",
-              },
-              {
-                title: "The condition is tested",
-                body: "The buyer confirms receipt, which releases the funds, or raises a problem, which freezes them, or says nothing, in which case an automatic release happens after a set period.",
-              },
-              {
-                title: "Funds are released or refunded",
-                body: "The money goes to the seller, less any commission, or back to the buyer if the dispute is decided in their favour.",
-              },
-            ],
-          },
-          {
-            kind: "text",
-            paragraphs: [
-              "On ChatCart those periods are concrete: the seller has 24 hours to accept an order, and the funds release automatically 48 hours after the order is marked as sent if the buyer neither confirms nor disputes.",
-            ],
-          },
-        ],
-      },
-    ],
-    faqs: [
-      {
-        q: "What is an escrow account?",
-        a: "An arrangement where a neutral third party holds money for a transaction and releases it only once the agreed conditions are met — in a marketplace, usually delivery to the buyer.",
-      },
-      {
-        q: "Is escrow the same as a bank account?",
-        a: "No. Escrow is a holding arrangement that defines who may move the money and when. It is not a deposit account in the buyer's name and does not carry deposit insurance.",
-      },
-      {
-        q: "Who does escrow protect?",
-        a: "Both sides, in different ways. The buyer is not handing money directly to a stranger, and the seller is not shipping against an unverified payment claim. Each side gets certainty about a different half of the deal.",
-      },
-      {
-        q: "Who decides when the money is released?",
-        a: "The rules of the arrangement. In a marketplace that means the buyer confirming, a fixed waiting period expiring, or a dispute being resolved by the platform.",
-      },
-    ],
-    related: [
-      { label: "Escrow payments on ChatCart", path: "/escrow" },
-      { label: "What is buyer protection?", path: "/glossary/buyer-protection" },
-      { label: "What is a payment gateway?", path: "/glossary/payment-gateway" },
-      { label: "How ChatCart works", path: "/how-it-works" },
+      { label: "Buyer Protection explained", path: "/buyer-protection" },
     ],
     updated: UPDATED,
   },
@@ -377,8 +262,8 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
           {
             kind: "text",
             paragraphs: [
-              "Protection on ChatCart comes from the payment hold rather than from a badge. The buyer pays into escrow, so the money has not reached the seller while a problem can still be raised. The seller has 24 hours to accept an order, funds release 48 hours after the order is marked as sent unless the buyer confirms or disputes, and a dispute freezes the payment entirely.",
-              "ChatCart is the marketplace where the sale happens, and does not position escrow as insurance. The specific commitment is that the seller is not paid until the order is delivered, and that a dispute stops the money moving.",
+              "Protection on ChatCart comes from the payment hold rather than from a badge. The buyer pays through ChatCart with Buyer Protection, so the money has not reached the seller while a problem can still be raised. The seller has 24 hours to accept an order, funds release 48 hours after the order is marked as sent unless the buyer confirms or disputes, and a dispute freezes the payment entirely.",
+              "ChatCart is the marketplace where the sale happens, and does not position Buyer Protection as insurance. The specific commitment is that the seller is not paid until the order is delivered, and that a dispute stops the money moving.",
             ],
           },
         ],
@@ -403,8 +288,8 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
       },
     ],
     related: [
-      { label: "Escrow payments explained", path: "/escrow" },
-      { label: "What is an escrow account?", path: "/glossary/escrow-account" },
+      { label: "Buyer Protection explained", path: "/buyer-protection" },
+      { label: "What is buyer protection?", path: "/glossary/buyer-protection" },
       { label: "Buying safely online", path: "/for-buyers" },
       { label: "Frequently asked questions", path: "/faq" },
     ],
@@ -434,7 +319,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
             kind: "text",
             paragraphs: [
               "It is the overlap of two things that are usually separate. A social platform has discovery and attention but no transaction layer. A marketplace has the transaction layer but expects the buyer to arrive already searching.",
-              "A social commerce marketplace keeps both: the feed creates demand, and the marketplace machinery — listings, payment, escrow, delivery, disputes, reviews — converts it without the buyer having to leave.",
+              "A social commerce marketplace keeps both: the feed creates demand, and the marketplace machinery — listings, payment, Buyer Protection, delivery, disputes, reviews — converts it without the buyer having to leave.",
             ],
           },
         ],
@@ -458,13 +343,13 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
                 "Payment",
                 "Arranged between the two parties",
                 "Handled by the platform",
-                "Held in escrow by the platform",
+                "Held by the platform until delivery",
               ],
               [
                 "Who carries the risk",
                 "Whoever pays or ships first",
                 "The platform's policy applies",
-                "The escrow hold spreads it",
+                "The Buyer Protection hold spreads it",
               ],
               [
                 "Fulfilment record",
@@ -501,7 +386,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
         a: "A normal marketplace waits for a buyer who is already searching. A social commerce marketplace creates the interest first, through video and photo content, then converts it in the same place.",
       },
       {
-        q: "Does a social commerce marketplace need escrow?",
+        q: "Does a social commerce marketplace need Buyer Protection?",
         a: "It does not strictly need it, but without a payment hold the risk of a transaction falls entirely on whichever side moves first — which is the problem that pushes buyers back to a search-driven marketplace.",
       },
     ],
@@ -565,7 +450,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
             kind: "text",
             paragraphs: [
               "Video gets attention and then hands the buyer to a broken checkout. On most social platforms the buyer watches the clip, then has to find the seller, ask the price, negotiate, and arrange a payment outside the platform entirely.",
-              "Every one of those steps loses people, and the ones who persist are the ones most exposed to risk. Attaching the item, the price and an escrow payment to the video is what closes the distance that the video itself created.",
+              "Every one of those steps loses people, and the ones who persist are the ones most exposed to risk. Attaching the item, the price and a protected payment to the video is what closes the distance that the video itself created.",
             ],
           },
         ],
@@ -581,14 +466,14 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
         a: "Live shopping is one format of it. Video commerce also covers pre-recorded short-form clips and longer product videos that remain purchasable after the moment they were posted.",
       },
       {
-        q: "Why does video commerce need escrow?",
+        q: "Why does video commerce need Buyer Protection?",
         a: "Because the buyer is usually committing to a seller they found through content rather than a business they know. A payment hold is what makes that commitment reasonable.",
       },
     ],
     related: [
       { label: "Social commerce in Nigeria", path: "/social-commerce" },
       { label: "What is social commerce?", path: "/glossary/social-commerce" },
-      { label: "Escrow payments explained", path: "/escrow" },
+      { label: "Buyer Protection explained", path: "/buyer-protection" },
       { label: "Features", path: "/features" },
     ],
     updated: UPDATED,
@@ -596,15 +481,15 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
   {
     slug: "payment-gateway",
     term: "Payment gateway",
-    title: "What Is a Payment Gateway? Definition and How It Differs From Escrow",
+    title: "What Is a Payment Gateway? Definition and How It Differs From Buyer Protection",
     description:
-      "A payment gateway moves money between a buyer, a seller and the banks. Definition, what it does not do, and how it differs from escrow protection.",
+      "A payment gateway moves money between a buyer, a seller and the banks. Definition, what it does not do, and how it differs from buyer protection.",
     shortDefinition:
       "A payment gateway is the service that authorises and processes a card or bank payment on behalf of a business, moving money between the buyer's bank and the merchant.",
     keywords: [
       "what is a payment gateway",
       "payment gateway definition",
-      "payment gateway vs escrow",
+      "payment gateway vs Buyer Protection",
       "how does a payment gateway work",
       "payment gateway Nigeria",
     ],
@@ -630,14 +515,14 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
             kind: "text",
             paragraphs: [
               "This is the distinction that trips people up. A gateway successfully processing a payment tells you the money is real and has moved. It does not tell you anything about whether the seller will ship, whether the item matches its description, or what happens if it does not.",
-              "Protection comes from what sits on top of the gateway: who is holding the money, under what conditions it is released, and who can freeze it. That is the escrow layer, and it is a different product from the payment rail.",
+              "Protection comes from what sits on top of the gateway: who is holding the money, under what conditions it is released, and who can freeze it. That is the Buyer Protection layer, and it is a different product from the payment rail.",
             ],
           },
           {
             kind: "bullets",
             items: [
               "Gateways answer: did this payment succeed, and is it safe to accept?",
-              "Escrow answers: who is allowed to receive this money, and when?",
+              "Buyer Protection answers: who is allowed to receive this money, and when?",
               "A marketplace needs both — one to take the payment, one to decide when it is released.",
             ],
           },
@@ -650,7 +535,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
           {
             kind: "text",
             paragraphs: [
-              "Payments on ChatCart are processed by a licensed payment provider, which handles the authorisation and settlement. ChatCart's escrow layer sits above that: the payment is collected into the platform's control and held rather than passed on to the seller immediately.",
+              "Payments on ChatCart are processed by a payment service provider, which handles the authorisation and settlement. ChatCart's Buyer Protection layer sits above that: the payment is collected into the platform's control and held rather than passed on to the seller immediately.",
               "Refunds travel back through the same gateway to the original payment method — which is why a refund is not instant, and why the arrival time is set by the buyer's bank rather than by ChatCart.",
             ],
           },
@@ -664,7 +549,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
       },
       {
         q: "Does a payment gateway protect buyers?",
-        a: "Not by itself. It confirms the payment is real and successful. Whether the buyer is protected depends on what happens to the money after that — which is the escrow layer.",
+        a: "Not by itself. It confirms the payment is real and successful. Whether the buyer is protected depends on what happens to the money after that — which is the Buyer Protection layer.",
       },
       {
         q: "Why are refunds not instant?",
@@ -672,8 +557,8 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
       },
     ],
     related: [
-      { label: "Escrow payments explained", path: "/escrow" },
-      { label: "What is an escrow account?", path: "/glossary/escrow-account" },
+      { label: "Buyer Protection explained", path: "/buyer-protection" },
+      { label: "What is buyer protection?", path: "/glossary/buyer-protection" },
       { label: "What is buyer protection?", path: "/glossary/buyer-protection" },
       { label: "Frequently asked questions", path: "/faq" },
     ],

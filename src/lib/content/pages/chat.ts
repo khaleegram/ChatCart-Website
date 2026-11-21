@@ -6,7 +6,7 @@ export const chatPage: ContentPage = {
   slug: "chat",
   title: "Chat for Marketplace: Buyer & Seller Chat With the Item Attached",
   description:
-    "ChatCart is marketplace chat where the item, its photos and its price are attached from the first message. Agree a price and pay into escrow in one thread.",
+    "ChatCart is marketplace chat where the item, its photos and its price are attached from the first message. Agree a price and pay with Buyer Protection in one thread.",
   h1: "Marketplace chat that already knows what you are asking about",
   lede: "On every other platform the conversation starts with a screenshot and a guessing game. On ChatCart the item, its photos and its price are already in the thread before you type a word.",
   eyebrow: "Chat-first commerce",
@@ -43,7 +43,7 @@ export const chatPage: ContentPage = {
           kind: "text",
           paragraphs: [
             "When you message a seller from a post, ChatCart attaches a quote card to the opening message. The seller sees the exact item — its title, its photos or video cover, and its listed price — sitting inside the thread, with the conversation already open.",
-            "That single detail is what makes the rest of the product possible. Because the thread knows which item it is about, an offer can be made against it, an escrow order can be opened against it, and a dispute can be settled against it.",
+            "That single detail is what makes the rest of the product possible. Because the thread knows which item it is about, an offer can be made against it, a protected order can be opened against it, and a dispute can be settled against it.",
           ],
         },
         {
@@ -82,14 +82,14 @@ export const chatPage: ContentPage = {
         {
           kind: "text",
           paragraphs: [
-            "The thread does not dead-end at “send me your account number”. Checkout opens from the deal itself, the buyer pays into escrow, and the order status lives on the same screen as the conversation about it.",
+            "The thread does not dead-end at “send me your account number”. Checkout opens from the deal itself, the buyer pays through ChatCart with Buyer Protection, and the order status lives on the same screen as the conversation about it.",
             "That means the seller never has to take a payment screenshot on trust, and the buyer never has to wonder whether the money actually arrived. The state of the money is displayed by the system, not asserted by the other person.",
           ],
         },
         {
           kind: "bullets",
           items: [
-            "Escrow holds the payment until the order is received.",
+            "Buyer Protection holds the payment until the order is received.",
             "The thread shows one live status line — paid, preparing, shipped, completed, disputed — so both sides read the same state.",
             "Delivery details are collected at checkout instead of being typed into chat.",
           ],
@@ -133,12 +133,12 @@ export const chatPage: ContentPage = {
     },
     {
       q: "Why not just use WhatsApp?",
-      a: "You can, and many sellers do. The difference is that WhatsApp has no idea which item you mean, cannot hold an offer, and cannot hold the money. ChatCart is the same conversation with the item, the agreed price and the escrow all attached to it.",
+      a: "You can, and many sellers do. The difference is that WhatsApp has no idea which item you mean, cannot hold an offer, and cannot hold the money. ChatCart is the same conversation with the item, the agreed price and Buyer Protection all attached to it.",
     },
   ],
   related: [
     { label: "How offers and counter-offers work", path: "/offers" },
-    { label: "Escrow: money held until delivery", path: "/escrow" },
+    { label: "Buyer Protection: payment held until delivery", path: "/buyer-protection" },
     { label: "Social commerce in Nigeria", path: "/social-commerce" },
     { label: "How ChatCart works, step by step", path: "/how-it-works" },
     { label: "Selling on ChatCart", path: "/for-sellers" },

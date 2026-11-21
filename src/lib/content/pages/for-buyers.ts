@@ -4,16 +4,16 @@ import type { ContentPage } from "../types";
 
 export const forBuyersPage: ContentPage = {
   slug: "for-buyers",
-  title: "Buy Online Safely in Nigeria: Escrow, Offers and Order Tracking",
+  title: "Buy Online Safely in Nigeria: Buyer Protection, Offers and Order Tracking",
   description:
-    "Shop local sellers without sending money into a stranger's account. Pay into escrow, agree the price in chat, and track the order until it reaches you.",
+    "Shop local sellers without sending money into a stranger's account. Pay with Buyer Protection, agree the price in chat, and track the order until it reaches you.",
   h1: "Buy from strangers without trusting them first",
   lede: "Ordering from someone you have never met should not require a leap of faith. On ChatCart the money waits until the order arrives, and either side can stop it going further.",
   eyebrow: "For buyers",
   keywords: [
     "buy online safely Nigeria",
     "how to buy on ChatCart",
-    "escrow buyer protection Nigeria",
+    "buyer protection Nigeria",
     "order tracking app Nigeria",
     "shop from local sellers Nigeria",
     "delivery to your door Nigeria",
@@ -87,7 +87,7 @@ export const forBuyersPage: ContentPage = {
           kind: "text",
           paragraphs: [
             "Reviews on ChatCart come from buyers who actually completed an order, so they are attached to real transactions rather than to whoever asks loudest. Sellers also carry their listing history and the item videos they have posted.",
-            "The strongest protection is still the one you control: keep the negotiation and the payment in the app, because that is what keeps the escrow and the evidence intact.",
+            "The strongest protection is still the one you control: keep the negotiation and the payment in the app, because that is what keeps the payment protection and the evidence intact.",
           ],
         },
       ],
@@ -96,7 +96,7 @@ export const forBuyersPage: ContentPage = {
   faqs: [
     {
       q: "Is it safe to pay a seller I do not know?",
-      a: "The payment goes into escrow rather than into the seller's account, and only releases to them when the order is received or the release window passes. If something goes wrong, a dispute freezes the money before it reaches the seller.",
+      a: "The payment is held by ChatCart rather than going into the seller's account, and only releases to them when the order is received or the release window passes. If something goes wrong, a dispute freezes the money before it reaches the seller.",
     },
     {
       q: "What if the item never arrives?",
@@ -104,7 +104,7 @@ export const forBuyersPage: ContentPage = {
     },
     {
       q: "Can I pay after delivery instead?",
-      a: "Escrow is the middle ground: you pay up front, but the seller cannot touch the money until the order is delivered. It gives the seller the certainty to ship and gives you the protection of not paying them directly.",
+      a: "Buyer Protection is the middle ground: you pay up front, but the seller is not paid until the order is delivered. It gives the seller the certainty to ship and gives you the protection of not paying them directly.",
     },
     {
       q: "Do I need to negotiate?",
@@ -116,11 +116,11 @@ export const forBuyersPage: ContentPage = {
     },
     {
       q: "What if the seller asks me to pay outside the app?",
-      a: "You can, but you give up escrow, the record of the agreed price, and any ability to dispute. That is a worse deal than the one offered inside the app.",
+      a: "You can, but you give up Buyer Protection, the record of the agreed price, and any ability to dispute. That is a worse deal than the one offered inside the app.",
     },
   ],
   related: [
-    { label: "Escrow payments explained", path: "/escrow" },
+    { label: "Buyer Protection explained", path: "/buyer-protection" },
     { label: "Offers and negotiation", path: "/offers" },
     { label: "How ChatCart works", path: "/how-it-works" },
     { label: "Marketplace chat", path: "/chat" },

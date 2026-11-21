@@ -15,7 +15,7 @@ import { Logo } from "@/components/brand/Logo";
 const navLinks = [
   { label: "App preview", href: "/#app-preview" },
   { label: "How it works", href: "/how-it-works" },
-  { label: "Escrow", href: "/escrow" },
+  { label: "Buyer Protection", href: "/buyer-protection" },
   { label: "For sellers", href: "/for-sellers" },
   { label: "FAQ", href: "/faq" },
 ];

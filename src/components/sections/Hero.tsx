@@ -44,7 +44,7 @@ function FeedPhone() {
 function FloatingCards() {
   return (
     <>
-      {/* Bottom Right: Escrow Shield */}
+      {/* Bottom Right: Buyer Protection */}
       <motion.div
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -57,7 +57,7 @@ function FloatingCards() {
               <ShieldCheck size={22} />
             </div>
             <div>
-              <p className="text-base font-black text-white">Escrow Secured</p>
+              <p className="text-base font-black text-white">Buyer Protection</p>
               <p className="mt-0.5 text-xs font-semibold text-white/60">Funds held till delivery</p>
             </div>
           </div>
@@ -108,7 +108,7 @@ export function Hero() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A67C52] to-[#d6b797]">Buy in the moment.</span>
             </h1>
             <p className="muted-copy mt-6 max-w-[480px] text-lg text-[#555] leading-[1.6]">
-              ChatCart turns local shopping into an immersive feed. Swipe through products, DM sellers with auto-saved context, and checkout securely with escrow.
+              ChatCart turns local shopping into an immersive feed. Swipe through products, DM sellers with auto-saved context, and check out with Buyer Protection.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="#app-preview" className="btn-primary flex items-center justify-center gap-2 rounded-full bg-[#17211f] px-8 py-4 text-[15px] font-black text-white transition-transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(23,33,31,0.15)]">

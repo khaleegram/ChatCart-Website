@@ -16,7 +16,7 @@ const PATH = "/nigeria";
 
 const TITLE = "Buying and Selling on ChatCart Across Nigeria";
 const DESCRIPTION =
-  "How buying and selling works city by city in Nigeria — Lagos, Abuja, Kano, Port Harcourt, Ibadan and Kaduna — including dispatch, interstate courier routes and escrow.";
+  "How buying and selling works city by city in Nigeria — Lagos, Abuja, Kano, Port Harcourt, Ibadan and Kaduna — including dispatch, interstate courier routes and Buyer Protection.";
 
 export const metadata: Metadata = buildMetadata({
   title: TITLE,
@@ -28,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
     "online shopping Nigeria delivery",
     "sell online Nigeria city by city",
     "interstate delivery Nigeria marketplace",
-    "escrow payment Nigeria cities",
+    "safe payment Nigeria cities",
   ],
 });
 
@@ -55,7 +55,7 @@ export default function NigeriaIndexPage() {
         ]}
         eyebrow="Nigeria"
         h1="The same protections, wherever the parcel is going"
-        lede="Escrow works identically in every state — the seller is paid when the order is received. What changes from city to city is logistics: how fast a parcel moves, and whether it arrives at a door or waits at a park."
+        lede="Buyer Protection works identically in every state — the seller is paid when the order is received. What changes from city to city is logistics: how fast a parcel moves, and whether it arrives at a door or waits at a park."
       >
         <LinkCards
           cards={CITY_PAGES.map((page) => ({

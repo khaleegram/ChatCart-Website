@@ -55,14 +55,14 @@ export default async function LandingPage({ params }: Props) {
   const faq = faqSchema(page.faqs);
   if (faq) schemas.push(faq);
 
-  if (page.slug === "escrow") {
+  if (page.slug === "buyer-protection") {
     schemas.push(
       serviceSchema({
-        name: "ChatCart escrow payments",
+        name: "ChatCart Buyer Protection",
         description:
-          "Escrow payment handling for marketplace orders: the buyer's payment is held and released to the seller only when the order is received, or frozen if a dispute is opened.",
+          "How Buyer Protection works for marketplace orders: the buyer's payment is held and released to the seller only when the order is received, or frozen if a dispute is opened.",
         path,
-        serviceType: "Escrow payment service",
+        serviceType: "Buyer Protection",
       })
     );
   }

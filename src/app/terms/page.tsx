@@ -6,9 +6,9 @@ import { buildMetadata, SITE } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Terms of Service",
   description:
-    "The rules governing use of ChatCart: accounts, listings, escrow payments, commission, payouts, prohibited items and dispute handling.",
+    "The rules governing use of ChatCart: accounts, listings, Buyer Protection payments, commission, payouts, prohibited items and dispute handling.",
   path: "/terms",
-  keywords: ["ChatCart terms of service", "marketplace terms Nigeria", "escrow terms of service"],
+  keywords: ["ChatCart terms of service", "marketplace terms Nigeria", "buyer terms of service"],
 });
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {

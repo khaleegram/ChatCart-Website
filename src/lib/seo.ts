@@ -22,11 +22,11 @@ export const SITE = {
   lang: "en-NG",
   country: "Nigeria",
   countryCode: "NG",
-  tagline: "Chat, agree the price, pay into escrow.",
+  tagline: "Chat, agree the price, pay with Buyer Protection.",
   shortDescription:
-    "ChatCart is a social commerce marketplace: discover products in a video feed, agree the price in chat, and pay into escrow.",
+    "ChatCart is a social commerce marketplace: discover products in a video feed, agree the price in chat, and pay with Buyer Protection.",
   longDescription:
-    "ChatCart is a chat-first social commerce marketplace for Nigeria. Buyers discover local products in a full-screen video feed, message sellers with the exact item already attached, negotiate a price with offers and counter-offers, and pay into escrow that only releases once the order is received.",
+    "ChatCart is a chat-first social commerce marketplace for Nigeria. Buyers discover local products in a full-screen video feed, message sellers with the exact item already attached, negotiate a price with offers and counter-offers, and pay with Buyer Protection that releases the seller's payment only once the order is received.",
   /**
    * One address, deliberately. There is a single mailbox, so publishing
    * support@/legal@/privacy@ variants would put three dead addresses on the
@@ -58,7 +58,7 @@ export function absoluteUrl(path = "/"): string {
  * This is referenced explicitly rather than left to Next's `opengraph-image`
  * file convention. That convention only applies to the segment the file sits
  * in, so the root `app/opengraph-image.png` covered the homepage but left every
- * content page — /escrow, /glossary/*, /compare/* — with no `og:image` at all,
+ * content page — /buyer-protection, /glossary/*, /compare/* — with no `og:image` at all,
  * meaning links to them shared with no picture. One stable URL referenced from
  * the metadata builders puts a card on every page.
  */
@@ -162,21 +162,20 @@ export const KEYWORD_CLUSTERS: KeywordCluster[] = [
     ],
   },
   {
-    id: "escrow",
-    label: "Escrow & safe payment",
-    page: "/escrow",
+    id: "buyer-protection",
+    label: "Buyer Protection & safe payment",
+    page: "/buyer-protection",
     terms: [
-      "escrow payment Nigeria",
-      "escrow app Nigeria",
-      "escrow marketplace",
-      "what is escrow payment",
-      "how escrow works when buying online",
+      "safe payment Nigeria",
+      "buyer protection app Nigeria",
+      "marketplace with buyer protection",
+      "what is buyer protection",
+      "how buyer protection works when buying online",
       "safe online payment Nigeria",
       "buyer protection Nigeria",
       "secure payment for online sellers",
       "online payment protection",
       "money held until delivery",
-      "escrow account for online shopping",
       "release payment after delivery",
     ],
   },
@@ -259,7 +258,6 @@ export const KEYWORD_CLUSTERS: KeywordCluster[] = [
     terms: [
       "what is social commerce",
       "what is conversational commerce",
-      "what is an escrow account",
       "what is buyer protection",
       "what is a social commerce marketplace",
       "what is video commerce",
@@ -270,7 +268,7 @@ export const KEYWORD_CLUSTERS: KeywordCluster[] = [
     id: "brand",
     label: "Brand",
     page: "/",
-    terms: ["ChatCart", "ChatCart app", "ChatCart Nigeria", "ChatCart escrow"],
+    terms: ["ChatCart", "ChatCart app", "ChatCart Nigeria", "ChatCart Buyer Protection"],
   },
 ];
 
@@ -290,7 +288,7 @@ export function keywordsForPage(path: string): string[] {
  *
  * Deliberately absent: aggregateRating and review markup. The product has no
  * real ratings to report, and inventing them is both a Google spam violation
- * and the exact dishonesty the escrow model is meant to prevent.
+ * and the exact dishonesty Buyer Protection model is meant to prevent.
  * ------------------------------------------------------------------ */
 
 export type Schema = Record<string, unknown>;
@@ -363,7 +361,7 @@ export function softwareApplicationSchema(): Schema {
       "Product video feed",
       "Buyer and seller chat with item context attached",
       "Price offers, counter-offers and acceptance",
-      "Escrow payment released on delivery",
+      "Buyer Protection payment released on delivery",
       "Seller order management and bank payouts",
       "In-app dispute resolution",
     ],

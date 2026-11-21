@@ -14,9 +14,9 @@ import {
 
 const PATH = "/glossary";
 
-const TITLE = "Social Commerce and Escrow Glossary";
+const TITLE = "Social Commerce and Buyer Protection Glossary";
 const DESCRIPTION =
-  "Plain definitions of the terms behind chat-first marketplaces: social commerce, conversational commerce, escrow accounts, buyer protection and payment gateways.";
+  "Plain definitions of the terms behind chat-first marketplaces: social commerce, conversational commerce, buyer protection and payment gateways.";
 
 export const metadata: Metadata = buildMetadata({
   title: TITLE,
@@ -24,7 +24,7 @@ export const metadata: Metadata = buildMetadata({
   path: PATH,
   keywords: [
     "social commerce glossary",
-    "escrow glossary",
+    "buyer protection glossary",
     "ecommerce terms explained",
     "marketplace terms Nigeria",
     "conversational commerce meaning",
@@ -72,7 +72,7 @@ export default function GlossaryIndexPage() {
             Definitions are only useful if they are precise
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-white/70">
-            Escrow, buyer protection and insurance get used interchangeably, and they are not the
+            Buyer protection and insurance get used interchangeably, and they are not the
             same thing. Where a term has a limit, these pages say so — a definition that flatters the
             product is worse than no definition at all.
           </p>

@@ -18,8 +18,8 @@ const faqs = [
     a: "The product can show Ask for Price, then open a DM with the product preview and greeting already attached.",
   },
   {
-    q: "Where does escrow fit?",
-    a: "Escrow connects the product story, buyer chat, delivery details, and payment so funds can be held until delivery is confirmed.",
+    q: "Where does Buyer Protection fit?",
+    a: "Buyer Protection connects the product story, buyer chat, delivery details, and payment so funds can be held until delivery is confirmed.",
   },
 ];
 
@@ -34,7 +34,7 @@ export function FAQ() {
             <p className="section-kicker">FAQ</p>
             <h2 className="display-title mt-3 text-4xl sm:text-5xl">Clearer answers, quieter UI.</h2>
             <p className="muted-copy mt-5">
-              The buying journey is social first: discover in the feed, chat with context, then checkout with escrow.
+              The buying journey is social first: discover in the feed, chat with context, then check out with Buyer Protection.
             </p>
           </div>
 

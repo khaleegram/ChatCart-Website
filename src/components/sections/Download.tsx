@@ -40,7 +40,7 @@ export function Download() {
                 <p className="text-sm font-black">Launch checklist</p>
                 <span className="rounded-full bg-[#f4eadf] px-3 py-1 text-xs font-black text-[#8B623E]">Ready</span>
               </div>
-              {["Vertical feed", "Context DMs", "Ask for Price", "Escrow checkout"].map((item) => (
+              {["Vertical feed", "Context DMs", "Ask for Price", "Protected checkout"].map((item) => (
                 <div key={item} className="flex items-center justify-between border-t border-[#edf0ee] py-4">
                   <p className="text-sm font-bold text-[#53625e]">{item}</p>
                   <ArrowRight size={16} className="text-[#A67C52]" />

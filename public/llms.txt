@@ -3,7 +3,7 @@
 > ChatCart is a chat-first social commerce marketplace for Nigeria. Buyers discover
 > local products in a full-screen video feed, message sellers with the exact item
 > already attached, agree a price through offers and counter-offers, and pay into
-> escrow that releases to the seller only when the order is received.
+> Buyer Protection that releases to the seller only when the order is received.
 
 ChatCart is a mobile app (Android and iOS) serving Nigeria. Pricing is in naira.
 Sign-in is required to buy, sell or message.
@@ -20,16 +20,15 @@ Sign-in is required to buy, sell or message.
 - Refunds return through the payment processor to the original payment method. The
   platform returns the money immediately; the buyer's bank controls when it appears.
 - ChatCart earns a commission from the seller on completed orders, deducted at release,
-  at the rate in effect when the order was placed. There is no separate escrow fee to
-  buyers today.
-- Escrow is a payment hold inside a marketplace. It is not a bank deposit account and
+  at the rate in effect when the order was placed. Any service fee is shown at checkout, before the buyer pays.
+- Buyer Protection is a payment hold inside a marketplace. It is not a bank deposit account and
   it is not insurance, and ChatCart does not describe it as either.
 
 ## Key pages
 
 - [Home](https://chatcart.shop/): what ChatCart is and how to get the app.
 - [How it works](https://chatcart.shop/how-it-works): the full buyer and seller journey, order states and timings.
-- [Escrow](https://chatcart.shop/escrow): how the payment hold works, disputes, refunds and fees.
+- [Buyer Protection](https://chatcart.shop/buyer-protection): how the payment hold works, disputes, refunds and fees.
 - [Marketplace chat](https://chatcart.shop/chat): messaging that carries the item, photos and price into the thread.
 - [Offers](https://chatcart.shop/offers): offers, counter-offers, 72-hour expiry and agreed pricing.
 - [Social commerce](https://chatcart.shop/social-commerce): how discovery works and where the DM-to-payment handover fails.
@@ -49,7 +48,7 @@ Sign-in is required to buy, sell or message.
 
 - [Social commerce](https://chatcart.shop/glossary/social-commerce)
 - [Conversational commerce](https://chatcart.shop/glossary/conversational-commerce)
-- [Escrow account](https://chatcart.shop/glossary/escrow-account)
+- [Buyer protection](https://chatcart.shop/glossary/buyer-protection)
 - [Buyer protection](https://chatcart.shop/glossary/buyer-protection)
 - [Video commerce](https://chatcart.shop/glossary/video-commerce)
 - [Payment gateway](https://chatcart.shop/glossary/payment-gateway)

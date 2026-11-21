@@ -5,14 +5,14 @@ import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Why We Built a Chat-First Marketplace With Escrow",
+  title: "Why We Built a Chat-First Marketplace With Buyer Protection",
   description:
-    "ChatCart turns short-form product discovery into contextual chat, agreed prices and escrow-protected checkout for buyers and local sellers in Nigeria.",
+    "ChatCart turns short-form product discovery into contextual chat, agreed prices and protected checkout for buyers and local sellers in Nigeria.",
   path: "/about",
   keywords: [
     "about ChatCart",
     "chat-first marketplace Nigeria",
-    "escrow marketplace Nigeria",
+    "marketplace with buyer protection Nigeria",
     "who owns ChatCart",
   ],
 });
@@ -45,7 +45,7 @@ export default function AboutPage() {
             Social media made local products exciting to discover, but it did not finish the buying journey. Buyers scroll endlessly, ask for seller numbers, move to WhatsApp, repeat product questions, negotiate without context, and hope payment goes safely.
           </p>
           <p className="leading-relaxed text-white/55">
-            Sellers deal with the other side of that chaos: hundreds of chats, missing product references, repeated price questions, delivery confusion, and no clean path from interest to escrow-backed checkout.
+            Sellers deal with the other side of that chaos: hundreds of chats, missing product references, repeated price questions, delivery confusion, and no clean path from interest to protected checkout.
           </p>
         </section>
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
             ChatCart combines a full-screen vertical product feed with serious commerce infrastructure. Sellers post video or photo stories. Buyers like, save, comment, DM, ask for price, or buy from the exact item they are viewing.
           </p>
           <p className="leading-relaxed text-white/55">
-            The chat carries the product preview automatically, checkout can pre-fill local delivery context, and escrow keeps payment tied to the order until delivery is confirmed.
+            The chat carries the product preview automatically, checkout can pre-fill local delivery context, and Buyer Protection keeps payment tied to the order until delivery is confirmed.
           </p>
         </section>
 

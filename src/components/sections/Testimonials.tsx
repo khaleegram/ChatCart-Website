@@ -17,7 +17,7 @@ const cards = [
   {
     name: "Kemi",
     role: "Beauty store owner",
-    quote: "It feels like reels, but built for buying. The delivery and escrow steps make the conversation serious.",
+    quote: "It feels like reels, but built for buying. The delivery and payment steps make the conversation serious.",
   },
 ];
 

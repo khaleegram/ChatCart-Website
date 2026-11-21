@@ -99,13 +99,13 @@ function SmartDMMock() {
   );
 }
 
-function EscrowMock() {
+function ProtectedPaymentMock() {
   return (
     <div className="relative w-full max-w-[260px] h-[280px] bg-[#17211f] text-white rounded-3xl p-4 shadow-2xl flex flex-col justify-between">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
           <ShieldCheck size={14} className="text-[#55d596]" />
-          <span className="text-[9px] font-black uppercase tracking-wider text-[#55d596]">Escrow Lock</span>
+          <span className="text-[9px] font-black uppercase tracking-wider text-[#55d596]">Payment Held</span>
         </div>
         <div className="text-[9px] font-bold text-white/50">ID #4928</div>
       </div>
@@ -113,7 +113,7 @@ function EscrowMock() {
       {/* Checkout States */}
       <div className="space-y-3.5 my-auto">
         {[
-          { label: "1. Funds Held Securely", desc: "Held in ChatCart vault", active: true },
+          { label: "1. Funds Held Securely", desc: "Held safely until delivery", active: true },
           { label: "2. Seller Dispatches", desc: "Delivery service tracking", active: true },
           { label: "3. Delivery Confirmed", desc: "Funds released to seller", active: false },
         ].map((step, idx) => (
@@ -131,7 +131,7 @@ function EscrowMock() {
 
       {/* Guarantee Badge */}
       <div className="rounded-xl bg-white/5 p-2.5 text-center text-[9px] font-bold text-white/70 border border-white/5">
-        🔐 Payment guaranteed.
+        🔐 Held until delivery.
       </div>
     </div>
   );
@@ -194,13 +194,13 @@ export function Features() {
       mockup: <SmartDMMock />,
     },
     {
-      title: "Direct escrow payment security",
+      title: "Buyer Protection at checkout",
       tag: "Buyer Protection",
-      copy: "Purchase with complete confidence. Funds are locked securely in our secure vault until you confirm delivery, keeping transactions fully protected.",
+      copy: "Buy with confidence. Your payment is held safely until you confirm delivery, and a dispute pauses the payout.",
       bg: "bg-[#f0f8f5] text-[#17211f] border-black/5",
       accent: "text-emerald-600",
       kickerColor: "text-emerald-600 border-emerald-500/10 bg-emerald-500/5",
-      mockup: <EscrowMock />,
+      mockup: <ProtectedPaymentMock />,
     },
     {
       title: "One-tap address details delivery",

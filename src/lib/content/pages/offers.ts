@@ -80,7 +80,7 @@ export const offersPage: ContentPage = {
           items: [
             "An accepted offer records who agreed what, and when, so neither side has to rely on memory.",
             "Expiry stops stale offers from being used as leverage months later.",
-            "Because the agreed price flows into an escrow order, an accepted offer is a real commitment rather than a throwaway message.",
+            "Because the agreed price flows into a protected order, an accepted offer is a real commitment rather than a throwaway message.",
             "Negotiating inside the platform means the payment protection still applies to the number you agreed.",
           ],
         },
@@ -116,11 +116,11 @@ export const offersPage: ContentPage = {
     },
     {
       q: "Can we agree a price and pay outside the app?",
-      a: "Nothing technically stops two people from paying outside the app. It does mean giving up escrow, the agreed-price record and dispute handling — which is the entire reason to be on ChatCart.",
+      a: "Nothing technically stops two people from paying outside the app. It does mean giving up Buyer Protection, the agreed-price record and dispute handling — which is the entire reason to be on ChatCart.",
     },
   ],
   related: [
-    { label: "Escrow: money held until delivery", path: "/escrow" },
+    { label: "Buyer Protection: payment held until delivery", path: "/buyer-protection" },
     { label: "Chat with the item attached", path: "/chat" },
     { label: "Selling on ChatCart", path: "/for-sellers" },
     { label: "How ChatCart works", path: "/how-it-works" },

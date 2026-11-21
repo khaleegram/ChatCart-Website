@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Contact ChatCart",
   description:
-    "Get in touch with the ChatCart team about buying, selling, escrow payments, payouts, disputes or partnerships.",
+    "Get in touch with the ChatCart team about buying, selling, Buyer Protection payments, payouts, disputes or partnerships.",
   path: "/contact",
   keywords: [
     "contact ChatCart",

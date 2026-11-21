@@ -6,25 +6,25 @@ export const faqPage: ContentPage = {
   slug: "faq",
   title: "Frequently Asked Questions About Buying and Selling on ChatCart",
   description:
-    "Answers on escrow, offers, delivery, refunds, commission, payouts and disputes — the practical questions buyers and sellers ask before using ChatCart.",
+    "Answers on Buyer Protection, offers, delivery, refunds, commission, payouts and disputes — the practical questions buyers and sellers ask before using ChatCart.",
   h1: "Questions buyers and sellers actually ask",
-  lede: "Escrow, offers, delivery, refunds, commission. Short, specific answers — including the ones that are less flattering, like how long a refund really takes.",
+  lede: "Buyer Protection, offers, delivery, refunds, commission. Short, specific answers — including the ones that are less flattering, like how long a refund really takes.",
   eyebrow: "FAQ",
   keywords: [
     "ChatCart FAQ",
     "is ChatCart safe",
-    "how does ChatCart escrow work",
+    "how does ChatCart Buyer Protection work",
     "ChatCart commission",
     "how to get a refund on ChatCart",
     "ChatCart payout time",
-    "escrow questions Nigeria",
-    "marketplace escrow FAQ",
+    "buyer protection questions Nigeria",
+    "buyer protection FAQ",
   ],
   updated: "2026-09-29",
   sections: [
     {
       id: "payments",
-      heading: "Payments and escrow",
+      heading: "Payments and Buyer Protection",
       blocks: [
         {
           kind: "bullets",
@@ -117,11 +117,11 @@ export const faqPage: ContentPage = {
   faqs: [
     {
       q: "Is ChatCart safe to buy from?",
-      a: "Payments are held in escrow and released to the seller only when the order is received, or after the release window passes with no dispute. It is not a guarantee that every seller is honest — it is a guarantee that the seller does not get the money before the order is delivered.",
+      a: "Payments are held and released to the seller only when the order is received, or after the release window passes with no dispute. It does not promise that every seller is honest — it means the seller is not paid before the order is delivered, and a dispute pauses the payout.",
     },
     {
-      q: "What is escrow and why does ChatCart use it?",
-      a: "Escrow means a third party holds the buyer's money instead of passing it directly to the seller. It exists so neither side has to trust the other first: the buyer is not handing cash to a stranger, and the seller is not shipping against an unverified screenshot.",
+      q: "What is Buyer Protection and why does ChatCart use it?",
+      a: "Instead of paying the seller directly, the buyer pays through ChatCart, and the seller is paid after delivery. It exists so neither side has to trust the other first: the buyer is not handing cash to a stranger, and the seller is not shipping against an unverified screenshot.",
     },
     {
       q: "How long does the seller have to accept my order?",
@@ -165,7 +165,7 @@ export const faqPage: ContentPage = {
     },
   ],
   related: [
-    { label: "Escrow payments explained", path: "/escrow" },
+    { label: "Buyer Protection explained", path: "/buyer-protection" },
     { label: "How ChatCart works", path: "/how-it-works" },
     { label: "Offers and negotiation", path: "/offers" },
     { label: "For sellers", path: "/for-sellers" },

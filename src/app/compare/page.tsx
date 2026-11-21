@@ -14,9 +14,9 @@ import {
 
 const PATH = "/compare";
 
-const TITLE = "Comparisons: Marketplace, Chat, Escrow and Social Selling Channels";
+const TITLE = "Comparisons: Marketplace, Chat and Social Selling Channels";
 const DESCRIPTION =
-  "Honest comparisons of the channels Nigerian sellers use: WhatsApp, Instagram, TikTok, fixed-price marketplaces and standalone stores, against a chat-first marketplace with escrow.";
+  "Honest comparisons of the channels Nigerian sellers use: WhatsApp, Instagram, TikTok, fixed-price marketplaces and standalone stores, against a chat-first marketplace with Buyer Protection.";
 
 export const metadata: Metadata = buildMetadata({
   title: TITLE,

@@ -4,7 +4,7 @@ export const forSellersPage: ContentPage = {
   slug: "for-sellers",
   title: "Sell Online in Nigeria Without Chasing Payment Screenshots",
   description:
-    "Post a video, get orders that arrive already structured, and get paid from escrow once you ship. Built for Nigerian sellers who currently run on DMs.",
+    "Post a video, get orders that arrive already structured, and get paid once the order is delivered. Built for Nigerian sellers who currently run on DMs.",
   h1: "Sell online without chasing payment screenshots",
   lede: "If you already sell through DMs, you have most of what you need. What you do not have is proof the money is real, a record of what was agreed, or a place where the order actually lives.",
   eyebrow: "For sellers",
@@ -29,7 +29,7 @@ export const forSellersPage: ContentPage = {
           kind: "bullets",
           items: [
             "Every incoming order arrives with the item attached, so you stop working out which post a buyer meant.",
-            "The payment is already in escrow before you pack anything, so a transfer screenshot is never part of your process again.",
+            "The payment is already made and held before you pack anything, so a transfer screenshot is never part of your process again.",
             "The price you agreed is recorded, so a buyer cannot reasonably claim a different number later.",
             "Your order list shows what needs packing, what is in transit and what has been paid out.",
             "Delivery details are collected at checkout instead of arriving as a paragraph of text.",
@@ -63,7 +63,7 @@ export const forSellersPage: ContentPage = {
           kind: "steps",
           steps: [
             {
-              title: "The buyer's payment sits in escrow",
+              title: "The buyer's payment is held until delivery",
               body: "You can see that an order is paid before you spend money packaging it. That is the whole point of the hold.",
             },
             {
@@ -76,7 +76,7 @@ export const forSellersPage: ContentPage = {
             },
             {
               title: "Withdraw to your bank",
-              body: "Commission is deducted from the released amount and the remainder is your balance. Request a payout in-app — minimum ₦5,000 per payout, expected within about 3 business days.",
+              body: "Commission is deducted from the released amount and the remainder is paid out to your bank account. Request a payout in-app — minimum ₦5,000 per payout, expected within about 3 business days.",
             },
           ],
         },
@@ -112,7 +112,7 @@ export const forSellersPage: ContentPage = {
   faqs: [
     {
       q: "When do I actually get my money?",
-      a: "Funds release to your balance as soon as the buyer confirms delivery, or automatically 48 hours after you mark the order as sent if the buyer takes no action. You then request a payout to your bank.",
+      a: "Payment is released to you as soon as the buyer confirms delivery, or automatically 48 hours after you mark the order as sent if the buyer takes no action. You then request a payout to your bank.",
     },
     {
       q: "How much is the commission?",
@@ -137,7 +137,7 @@ export const forSellersPage: ContentPage = {
   ],
   related: [
     { label: "How ChatCart works", path: "/how-it-works" },
-    { label: "Escrow payments explained", path: "/escrow" },
+    { label: "Buyer Protection explained", path: "/buyer-protection" },
     { label: "Offers and negotiation", path: "/offers" },
     { label: "Marketplace chat", path: "/chat" },
     { label: "Social commerce in Nigeria", path: "/social-commerce" },

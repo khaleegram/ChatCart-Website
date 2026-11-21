@@ -20,7 +20,7 @@ const CORE_LINKS = [
   { label: "How it works", href: "/how-it-works" },
   { label: "Marketplace chat", href: "/chat" },
   { label: "Offers & negotiation", href: "/offers" },
-  { label: "Escrow payments", href: "/escrow" },
+  { label: "Buyer Protection", href: "/buyer-protection" },
   { label: "Social commerce", href: "/social-commerce" },
   { label: "All features", href: "/features" },
 ];
@@ -29,7 +29,7 @@ const PARTY_LINKS = [
   { label: "For sellers", href: "/for-sellers" },
   { label: "For buyers", href: "/for-buyers" },
   { label: "FAQ", href: "/faq" },
-  { label: "Escrow glossary", href: "/glossary/escrow-account" },
+  { label: "buyer protection glossary", href: "/glossary/buyer-protection" },
 ];
 
 const footerLinks: { title: string; links: { label: string; href: string }[] }[] = [
@@ -79,7 +79,7 @@ export function Footer() {
             </Link>
             <p className="max-w-sm text-sm leading-7 text-white/60">
               A social commerce marketplace where buyers discover local products, agree a price in
-              chat, and pay into escrow that only releases on delivery.
+              chat, and pay with Buyer Protection that only releases on delivery.
             </p>
             <div className="mt-6 flex gap-3">
               {[
@@ -149,7 +149,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright {year} ChatCart. All rights reserved.</p>
-          <p>Escrow is a payment hold, not deposit insurance.</p>
+          <p>Buyer Protection is a payment hold, not deposit insurance.</p>
         </div>
       </div>
     </footer>

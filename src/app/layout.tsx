@@ -19,7 +19,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const HOME_TITLE = "ChatCart — Chat to Buy: Social Commerce & Escrow App";
+const HOME_TITLE = "ChatCart — Chat to Buy: Social Commerce App with Buyer Protection";
 
 /** Search-console ownership tags, only emitted when the env var is set. */
 const verification: Metadata["verification"] = {};

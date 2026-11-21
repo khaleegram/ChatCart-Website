@@ -6,7 +6,7 @@ export const socialCommercePage: ContentPage = {
   slug: "social-commerce",
   title: "Social Commerce in Nigeria: What It Is and Why the DM Breaks It",
   description:
-    "Social commerce in Nigeria runs on video discovery and DMs — but payment is where it fails. See how a chat-first, escrow-backed marketplace closes the loop.",
+    "Social commerce in Nigeria runs on video discovery and DMs — but payment is where it fails. See how a chat-first, protected marketplace closes the loop.",
   h1: "Social commerce that finishes what the feed starts",
   lede: "Discovery in Nigeria already works. A video, a price, a DM — the top of the funnel is solved. What breaks is everything after the buyer says “I want it”.",
   eyebrow: "Social commerce",
@@ -88,7 +88,7 @@ export const socialCommercePage: ContentPage = {
             "Discovery stays a full-screen video and photo feed.",
             "The item, its price and its pictures follow the buyer into the chat automatically.",
             "Price is agreed with offers and counters, so the negotiation is recorded instead of lost.",
-            "Payment goes into escrow, so neither side has to go first on trust.",
+            "Payment is held until delivery, so neither side has to go first on trust.",
             "The order status lives in the same thread as the conversation about it.",
           ],
         },
@@ -115,7 +115,7 @@ export const socialCommercePage: ContentPage = {
     },
     {
       q: "How is this different from selling on Instagram or TikTok?",
-      a: "Discovery looks similar. The difference is what happens afterwards: the item context, the negotiated price, an escrow payment and a dispute process are all part of the same transaction instead of being handled in a separate chat app.",
+      a: "Discovery looks similar. The difference is what happens afterwards: the item context, the negotiated price, a protected payment and a dispute process are all part of the same transaction instead of being handled in a separate chat app.",
     },
     {
       q: "Do I need a website to sell?",
@@ -130,7 +130,7 @@ export const socialCommercePage: ContentPage = {
     { label: "What is social commerce?", path: "/glossary/social-commerce" },
     { label: "What is conversational commerce?", path: "/glossary/conversational-commerce" },
     { label: "Chat with the item attached", path: "/chat" },
-    { label: "Escrow payments explained", path: "/escrow" },
+    { label: "Buyer Protection explained", path: "/buyer-protection" },
     { label: "Selling on ChatCart", path: "/for-sellers" },
   ],
 };

@@ -30,7 +30,7 @@ export const CITY_PAGES: CityPage[] = [
     state: "Lagos State",
     title: "Buying and Selling on ChatCart in Lagos",
     description:
-      "How buying and selling works in Lagos: same-day dispatch across the mainland and island, escrow on every order, and what to check before you ship interstate.",
+      "How buying and selling works in Lagos: same-day dispatch across the mainland and island, Buyer Protection on every order, and what to check before you ship interstate.",
     h1: "Buying and selling on ChatCart in Lagos",
     lede: "Lagos has the deepest delivery infrastructure in the country and the largest concentration of buyers. It is also where a bad payment goes wrong fastest, because everything moves quickly.",
     keywords: [
@@ -38,7 +38,7 @@ export const CITY_PAGES: CityPage[] = [
       "buy and sell in Lagos",
       "sell online Lagos",
       "online shopping Lagos with delivery",
-      "escrow payment Lagos",
+      "safe payment Lagos",
       "Lagos online store",
     ],
     sections: [
@@ -49,7 +49,7 @@ export const CITY_PAGES: CityPage[] = [
           {
             kind: "text",
             paragraphs: [
-              "Intra-city delivery is the advantage. Dispatch riders can move a parcel across the mainland or between the island and the mainland within a day in most cases, which means the escrow hold is short — the buyer receives quickly, confirms quickly, and the seller is paid quickly.",
+              "Intra-city delivery is the advantage. Dispatch riders can move a parcel across the mainland or between the island and the mainland within a day in most cases, which means the payment hold is short — the buyer receives quickly, confirms quickly, and the seller is paid quickly.",
               "Order statuses matter more here than almost anywhere because the delivery window is short. If a seller marks an order as sent, the release clock starts, and in Lagos that clock is usually running against a delivery that genuinely happened that day.",
             ],
           },
@@ -103,14 +103,14 @@ export const CITY_PAGES: CityPage[] = [
         ],
       },
       {
-        id: "escrow",
-        heading: "Why escrow matters more at Lagos volumes",
+        id: "buyer-protection",
+        heading: "Why Buyer Protection matters more at Lagos volumes",
         blocks: [
           {
             kind: "text",
             paragraphs: [
               "Volume is what makes informal selling break down. A seller answering twenty DMs a day stops being able to remember which buyer agreed which price, and buyers stop being able to tell a real seller from a patient fraudster.",
-              "Escrow resolves the second problem directly: a fraudulent seller never receives the money, because the money is released on delivery rather than on a screenshot. The order record resolves the first, because the agreed price and the item are both attached to the thread.",
+              "Buyer Protection resolves the second problem directly: a fraudulent seller never receives the money, because the money is released on delivery rather than on a screenshot. The order record resolves the first, because the agreed price and the item are both attached to the thread.",
             ],
           },
         ],
@@ -119,7 +119,7 @@ export const CITY_PAGES: CityPage[] = [
     faqs: [
       {
         q: "How fast is delivery within Lagos?",
-        a: "Often same day or next day by dispatch rider, depending on the seller and the distance. The seller sets their own dispatch timing; the escrow release clock starts when they mark the order as sent.",
+        a: "Often same day or next day by dispatch rider, depending on the seller and the distance. The seller sets their own dispatch timing; the release clock starts when they mark the order as sent.",
       },
       {
         q: "Can I collect from the seller instead of paying for delivery?",
@@ -142,15 +142,15 @@ export const CITY_PAGES: CityPage[] = [
     state: "Federal Capital Territory",
     title: "Buying and Selling on ChatCart in Abuja",
     description:
-      "Buying and selling in Abuja: fast intra-city dispatch, buyers with higher average order values, and how escrow protects transactions between strangers.",
+      "Buying and selling in Abuja: fast intra-city dispatch, buyers with higher average order values, and how Buyer Protection protects transactions between strangers.",
     h1: "Buying and selling on ChatCart in Abuja",
-    lede: "Abuja is compact, well-connected and unusually dependent on people who arrived from somewhere else. That makes it a city of strangers buying from strangers, which is exactly the situation escrow is built for.",
+    lede: "Abuja is compact, well-connected and unusually dependent on people who arrived from somewhere else. That makes it a city of strangers buying from strangers, which is exactly the situation Buyer Protection is built for.",
     keywords: [
       "online marketplace Abuja",
       "buy and sell in Abuja",
       "sell online Abuja",
       "online shopping Abuja delivery",
-      "escrow payment Abuja",
+      "safe payment Abuja",
       "Abuja online store",
     ],
     sections: [
@@ -183,7 +183,7 @@ export const CITY_PAGES: CityPage[] = [
             kind: "text",
             paragraphs: [
               "Buyers in Abuja tend to transact at higher values than the national average, which changes the risk calculation on both sides. A larger order is worth more to a fraudster and worth more to a buyer who is nervous about paying a stranger.",
-              "This is where escrow does the most work commercially: it lets a seller ask a realistic price for a valuable item without the buyer having to decide whether they trust a transfer to someone they have never met. The negotiation stays in the thread, and the payment stays protected.",
+              "This is where Buyer Protection does the most work commercially: it lets a seller ask a realistic price for a valuable item without the buyer having to decide whether they trust a transfer to someone they have never met. The negotiation stays in the thread, and the payment stays protected.",
             ],
           },
           {
@@ -207,13 +207,13 @@ export const CITY_PAGES: CityPage[] = [
         ],
       },
       {
-        id: "escrow",
-        heading: "Why escrow matters here",
+        id: "buyer-protection",
+        heading: "Why Buyer Protection matters here",
         blocks: [
           {
             kind: "text",
             paragraphs: [
-              "Distance and unfamiliarity are the two things that make a transfer risky, and Abuja buyers deal with both by default. Escrow removes the need for either side to extend trust: the money is held, the item ships, and the release happens on receipt.",
+              "Distance and unfamiliarity are the two things that make a transfer risky, and Abuja buyers deal with both by default. Buyer Protection removes the need for either side to extend trust: the money is held, the item ships, and the release happens on receipt.",
               "If the item never arrives, the dispute freezes the funds before they reach the seller — which is the difference between a recoverable problem and a lost transfer.",
             ],
           },
@@ -231,7 +231,7 @@ export const CITY_PAGES: CityPage[] = [
       },
       {
         q: "Is buying from Lagos or Kano safe?",
-        a: "The escrow works the same regardless of distance: the seller is not paid until you receive the order. Ask in the thread how the parcel is travelling so you know where to collect it.",
+        a: "Buyer Protection works the same regardless of distance: the seller is not paid until you receive the order. Ask in the thread how the parcel is travelling so you know where to collect it.",
       },
     ],
     updated: UPDATED,
@@ -242,7 +242,7 @@ export const CITY_PAGES: CityPage[] = [
     state: "Kano State",
     title: "Buying and Selling on ChatCart in Kano",
     description:
-      "Kano has one of the deepest trading cultures in Nigeria. How sellers there use a video feed and escrow to reach buyers, and how delivery in and out of Kano works.",
+      "Kano has one of the deepest trading cultures in Nigeria. How sellers there use a video feed and Buyer Protection to reach buyers, and how delivery in and out of Kano works.",
     h1: "Buying and selling on ChatCart in Kano",
     lede: "Kano's markets have been organised trading for centuries, and the sellers there already know how to negotiate. What they have never had is a payment that holds until the goods land.",
     keywords: [
@@ -250,7 +250,7 @@ export const CITY_PAGES: CityPage[] = [
       "buy and sell in Kano",
       "sell online Kano",
       "online shopping Kano delivery",
-      "escrow payment Kano",
+      "safe payment Kano",
       "Kano online store",
       "Kano textile sellers online",
     ],
@@ -263,7 +263,7 @@ export const CITY_PAGES: CityPage[] = [
             kind: "text",
             paragraphs: [
               "Kano's trading districts — Kantin Kwari, Kurmi market, and the fabric and footwear trades around them — are built on negotiated prices and long-distance distribution. The skills required to sell are not in short supply. What has been missing is a way to sell to a buyer you cannot see without taking on the risk of shipping first.",
-              "That is a specific and expensive problem: a seller who wants to reach a buyer in Kaduna, Abuja or Lagos has to decide whether to send goods on trust or ask for a transfer on trust. Escrow means neither side has to make that call.",
+              "That is a specific and expensive problem: a seller who wants to reach a buyer in Kaduna, Abuja or Lagos has to decide whether to send goods on trust or ask for a transfer on trust. Buyer Protection means neither side has to make that call.",
             ],
           },
         ],
@@ -311,14 +311,14 @@ export const CITY_PAGES: CityPage[] = [
         ],
       },
       {
-        id: "escrow",
-        heading: "The problem escrow fixes in Kano",
+        id: "buyer-protection",
+        heading: "The problem Buyer Protection fixes in Kano",
         blocks: [
           {
             kind: "text",
             paragraphs: [
               "Kano sellers frequently ship goods worth real money to buyers they have never met in other states. The traditional answer is to insist on payment first, which pushes the entire risk onto the buyer and quietly loses sales from buyers who have been burned before.",
-              "Escrow inverts that into something both sides can accept. The seller ships knowing the money already exists and is held; the buyer pays knowing the seller cannot take it until the order arrives. Both halves of the trade get the certainty that used to be impossible at a distance.",
+              "Buyer Protection inverts that into something both sides can accept. The seller ships knowing the money already exists and is held; the buyer pays knowing the seller cannot take it until the order arrives. Both halves of the trade get the certainty that used to be impossible at a distance.",
             ],
           },
           {
@@ -332,7 +332,7 @@ export const CITY_PAGES: CityPage[] = [
     faqs: [
       {
         q: "Can I sell to buyers outside Kano?",
-        a: "Yes. Posts reach buyers browsing the feed nationally, and escrow is what makes shipping to a stranger in another state reasonable rather than a gamble.",
+        a: "Yes. Posts reach buyers browsing the feed nationally, and Buyer Protection is what makes shipping to a stranger in another state reasonable rather than a gamble.",
       },
       {
         q: "How long does delivery from Kano to Lagos or Abuja take?",
@@ -344,7 +344,7 @@ export const CITY_PAGES: CityPage[] = [
       },
       {
         q: "Does the seller get paid before shipping?",
-        a: "No. The buyer's payment is held in escrow and the seller receives it once the order is received, or automatically 48 hours after the order is marked as sent if the buyer does nothing.",
+        a: "No. The buyer's payment is held until delivery and the seller receives it once the order is received, or automatically 48 hours after the order is marked as sent if the buyer does nothing.",
       },
     ],
     updated: UPDATED,
@@ -355,15 +355,15 @@ export const CITY_PAGES: CityPage[] = [
     state: "Rivers State",
     title: "Buying and Selling on ChatCart in Port Harcourt",
     description:
-      "Buying and selling in Port Harcourt and the wider Niger Delta: local dispatch, interstate courier routes, and how escrow removes the risk of paying first.",
+      "Buying and selling in Port Harcourt and the wider Niger Delta: local dispatch, interstate courier routes, and how Buyer Protection removes the risk of paying first.",
     h1: "Buying and selling on ChatCart in Port Harcourt",
-    lede: "Port Harcourt is a high-cost, high-value market where buyers frequently order from Lagos and Aba. Distance is normal here — and distance is precisely what escrow is for.",
+    lede: "Port Harcourt is a high-cost, high-value market where buyers frequently order from Lagos and Aba. Distance is normal here — and distance is precisely what Buyer Protection is for.",
     keywords: [
       "online marketplace Port Harcourt",
       "buy and sell in Port Harcourt",
       "sell online Port Harcourt",
       "online shopping Port Harcourt delivery",
-      "escrow payment Rivers State",
+      "safe payment Rivers State",
       "Port Harcourt online store",
     ],
     sections: [
@@ -375,7 +375,7 @@ export const CITY_PAGES: CityPage[] = [
             kind: "text",
             paragraphs: [
               "A significant share of what Port Harcourt buyers want is not made locally. Clothing, electronics and household goods routinely come in from Lagos, Aba and Onitsha, which means most purchases here are remote purchases by default.",
-              "That is the situation where a transfer is most dangerous and where escrow is most valuable: the buyer cannot walk into the seller's shop, cannot see the goods first, and has to rely entirely on the listing and the conversation.",
+              "That is the situation where a transfer is most dangerous and where Buyer Protection is most valuable: the buyer cannot walk into the seller's shop, cannot see the goods first, and has to rely entirely on the listing and the conversation.",
             ],
           },
           {
@@ -395,7 +395,7 @@ export const CITY_PAGES: CityPage[] = [
           {
             kind: "text",
             paragraphs: [
-              "Selling locally is limited by the size of the local buyer pool; selling nationally is limited by trust. Escrow removes the second constraint, because a buyer in Kano or Abuja no longer has to decide whether to believe a seller they have never dealt with.",
+              "Selling locally is limited by the size of the local buyer pool; selling nationally is limited by trust. Buyer Protection removes the second constraint, because a buyer in Kano or Abuja no longer has to decide whether to believe a seller they have never dealt with.",
               "For sellers, that means the addressable market is the whole country rather than the city. The practical work is the same: post the product, answer the questions, ship when paid.",
             ],
           },
@@ -420,14 +420,14 @@ export const CITY_PAGES: CityPage[] = [
         ],
       },
       {
-        id: "escrow",
-        heading: "Why escrow is the point",
+        id: "buyer-protection",
+        heading: "Why Buyer Protection is the point",
         blocks: [
           {
             kind: "text",
             paragraphs: [
-              "In a market where most purchases cross a state line, the alternative to escrow is paying a stranger and hoping. That is a bad deal for buyers and, in the long run, an equally bad one for honest sellers, because buyers who have been burned stop buying remotely altogether.",
-              "Escrow holds the payment until the order is received and freezes it if a dispute is opened, which is what allows a Port Harcourt seller and a Kano buyer to trade with reasonable confidence.",
+              "In a market where most purchases cross a state line, the alternative to Buyer Protection is paying a stranger and hoping. That is a bad deal for buyers and, in the long run, an equally bad one for honest sellers, because buyers who have been burned stop buying remotely altogether.",
+              "Buyer Protection holds the payment until the order is received and freezes it if a dispute is opened, which is what allows a Port Harcourt seller and a Kano buyer to trade with reasonable confidence.",
             ],
           },
         ],
@@ -436,7 +436,7 @@ export const CITY_PAGES: CityPage[] = [
     faqs: [
       {
         q: "Can I buy from sellers in Lagos while in Port Harcourt?",
-        a: "Yes. The payment is held in escrow regardless of the distance, so the seller is not paid until you receive the order. Ask in the thread how the parcel will travel and where you will collect it.",
+        a: "Yes. The payment is held until delivery regardless of the distance, so the seller is not paid until you receive the order. Ask in the thread how the parcel will travel and where you will collect it.",
       },
       {
         q: "Do parcels get delivered to my door or a park?",
@@ -448,7 +448,7 @@ export const CITY_PAGES: CityPage[] = [
       },
       {
         q: "Can I sell to other states from Port Harcourt?",
-        a: "Yes, and the reach is national. Escrow is what makes selling to an unfamiliar buyer in another state reasonable for both sides.",
+        a: "Yes, and the reach is national. Buyer Protection is what makes selling to an unfamiliar buyer in another state reasonable for both sides.",
       },
     ],
     updated: UPDATED,
@@ -459,7 +459,7 @@ export const CITY_PAGES: CityPage[] = [
     state: "Oyo State",
     title: "Buying and Selling on ChatCart in Ibadan",
     description:
-      "Buying and selling in Ibadan: short dispatch routes and easy access to Lagos, how escrow protects orders, and what sellers should say about delivery.",
+      "Buying and selling in Ibadan: short dispatch routes and easy access to Lagos, how Buyer Protection protects orders, and what sellers should say about delivery.",
     h1: "Buying and selling on ChatCart in Ibadan",
     lede: "Ibadan is close enough to Lagos to share its supply of goods and far enough to have its own prices. That combination makes it a good market for sellers who can get delivery logistics right.",
     keywords: [
@@ -467,7 +467,7 @@ export const CITY_PAGES: CityPage[] = [
       "buy and sell in Ibadan",
       "sell online Ibadan",
       "online shopping Ibadan delivery",
-      "escrow payment Oyo State",
+      "safe payment Oyo State",
       "Ibadan online store",
     ],
     sections: [
@@ -511,13 +511,13 @@ export const CITY_PAGES: CityPage[] = [
         ],
       },
       {
-        id: "escrow",
-        heading: "Why escrow matters in Ibadan",
+        id: "buyer-protection",
+        heading: "Why Buyer Protection matters in Ibadan",
         blocks: [
           {
             kind: "text",
             paragraphs: [
-              "Ibadan buyers often pay sellers they have found through the app rather than sellers they know personally, and the same is true in reverse. Escrow means that unfamiliarity costs nobody anything: the buyer's money is held, and the seller ships knowing the funds are real and already accounted for.",
+              "Ibadan buyers often pay sellers they have found through the app rather than sellers they know personally, and the same is true in reverse. Buyer Protection means that unfamiliarity costs nobody anything: the buyer's money is held, and the seller ships knowing the funds are real and already accounted for.",
             ],
           },
         ],
@@ -545,7 +545,7 @@ export const CITY_PAGES: CityPage[] = [
     state: "Kaduna State",
     title: "Buying and Selling on ChatCart in Kaduna",
     description:
-      "Buying and selling in Kaduna: road routes to Kano, Abuja and the north, escrow on every order, and how sellers should handle interstate dispatch.",
+      "Buying and selling in Kaduna: road routes to Kano, Abuja and the north, Buyer Protection on every order, and how sellers should handle interstate dispatch.",
     h1: "Buying and selling on ChatCart in Kaduna",
     lede: "Kaduna sits on the road between the north's biggest trading city and the capital, which makes it a natural distribution point — and a natural place for goods to travel further than the buyer can see.",
     keywords: [
@@ -553,7 +553,7 @@ export const CITY_PAGES: CityPage[] = [
       "buy and sell in Kaduna",
       "sell online Kaduna",
       "online shopping Kaduna delivery",
-      "escrow payment Kaduna",
+      "safe payment Kaduna",
       "Kaduna online store",
     ],
     sections: [
@@ -565,7 +565,7 @@ export const CITY_PAGES: CityPage[] = [
             kind: "text",
             paragraphs: [
               "Kaduna's position on the northern road network means goods move through it constantly — from Kano and the northern markets down toward Abuja and the south, and back the other way. For a seller here, that means stock can arrive quickly and orders can be sent out in most directions.",
-              "It also means buyers in Kaduna frequently order from Kano and Abuja, and buyers in smaller northern towns order from Kaduna. Most of those transactions are between people who will never meet, which is exactly the case escrow was designed for.",
+              "It also means buyers in Kaduna frequently order from Kano and Abuja, and buyers in smaller northern towns order from Kaduna. Most of those transactions are between people who will never meet, which is exactly the case Buyer Protection was designed for.",
             ],
           },
         ],
@@ -598,7 +598,7 @@ export const CITY_PAGES: CityPage[] = [
             kind: "text",
             paragraphs: [
               "Sellers here can reach buyers across the north and beyond through the feed, without needing a shopfront or an existing social media following. The products that suit the format are the ones buyers ask questions about: fabrics, ready-to-wear, footwear, leather goods and household items.",
-              "The payment side is where sellers gain most. Instead of asking a new buyer to transfer on trust and losing the ones who refuse, the order arrives already paid into escrow, and the seller ships knowing the money exists.",
+              "The payment side is where sellers gain most. Instead of asking a new buyer to transfer on trust and losing the ones who refuse, the order arrives already paid, with the payment held safely, and the seller ships knowing the money exists.",
             ],
           },
           {
@@ -609,13 +609,13 @@ export const CITY_PAGES: CityPage[] = [
         ],
       },
       {
-        id: "escrow",
-        heading: "Why escrow matters here",
+        id: "buyer-protection",
+        heading: "Why Buyer Protection matters here",
         blocks: [
           {
             kind: "text",
             paragraphs: [
-              "Long road distances mean goods are in transit for days, and days in transit are days in which a buyer has paid and has nothing to show for it. That is the gap escrow closes: the money exists and is committed, but the seller cannot take it until the goods land.",
+              "Long road distances mean goods are in transit for days, and days in transit are days in which a buyer has paid and has nothing to show for it. That is the gap Buyer Protection closes: the money exists and is committed, but the seller cannot take it until the goods land.",
               "It also settles the reverse case. A seller sending valuable goods across a state line has proof the payment is real before spending money on packaging and carriage, rather than trusting a transfer screenshot.",
             ],
           },

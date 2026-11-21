@@ -28,7 +28,7 @@ export function Sellers() {
     },
     {
       title: "Verify Payments Instantly",
-      desc: "No more checking fake screenshots. See real-time escrow state verified by ChatCart before preparing items."
+      desc: "No more checking fake screenshots. See real-time order state verified by ChatCart before preparing items."
     },
     {
       title: "One-Tap Bank Payouts",
@@ -54,7 +54,7 @@ export function Sellers() {
             </h2>
             
             <p className="muted-copy mt-5 text-[#55635f] font-medium leading-relaxed">
-              DMs are automatically structured, transactions are escrow-guaranteed, and shipping tags are printed in one flow.
+              DMs are automatically structured, payments are covered by Buyer Protection, and shipping tags are printed in one flow.
             </p>
 
             {/* List of Perks */}
@@ -194,7 +194,7 @@ export function Sellers() {
                 <div className="bg-[#17211f] px-3 pb-3 text-white">
                   <div className="bg-gradient-to-br from-[#A67C52] to-[#8B623E] rounded-xl p-2.5 flex justify-between items-center shadow-md">
                     <div>
-                      <p className="text-[6.5px] text-white/75 font-black uppercase tracking-wider">Escrow Balance</p>
+                      <p className="text-[6.5px] text-white/75 font-black uppercase tracking-wider">Held Payment</p>
                       <p className="text-sm font-black mt-0.5">₦128,500</p>
                     </div>
                     <div className="flex flex-col items-end">
@@ -222,7 +222,7 @@ export function Sellers() {
                       <span>Buyer: Halima K. (Kano)</span>
                       <span className="text-emerald-600 font-extrabold bg-emerald-50 px-1.5 py-0.5 rounded-full flex items-center gap-0.5 border border-emerald-100">
                         <Lock size={6} />
-                        <span>Escrow Locked</span>
+                        <span>Payment Held</span>
                       </span>
                     </div>
                   </div>

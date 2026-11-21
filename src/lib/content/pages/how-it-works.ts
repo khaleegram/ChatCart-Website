@@ -4,9 +4,9 @@ import type { ContentPage } from "../types";
 
 export const howItWorksPage: ContentPage = {
   slug: "how-it-works",
-  title: "How ChatCart Works: From Video Feed to Escrow Payout",
+  title: "How ChatCart Works: From Video Feed to Seller Payout",
   description:
-    "The full ChatCart journey for buyers and sellers: discover in the feed, agree a price in chat, pay into escrow, ship, then release. Real timings, no guesswork.",
+    "The full ChatCart journey for buyers and sellers: discover in the feed, agree a price in chat, pay with Buyer Protection, ship, then release. Real timings, no guesswork.",
   h1: "How ChatCart works, from the feed to the payout",
   lede: "One path, both sides of it. Below is exactly what happens to an order — including the waiting periods, who can stop it, and when the money actually moves.",
   eyebrow: "The full journey",
@@ -14,9 +14,9 @@ export const howItWorksPage: ContentPage = {
     "how ChatCart works",
     "how to buy on ChatCart",
     "how to sell on ChatCart",
-    "escrow order process Nigeria",
+    "order process Nigeria",
     "marketplace order status explained",
-    "ChatCart escrow steps",
+    "ChatCart Buyer Protection steps",
   ],
   updated: "2026-09-29",
   sections: [
@@ -40,7 +40,7 @@ export const howItWorksPage: ContentPage = {
               body: "Send an offer, accept a counter, or take the listed price. Once an offer is accepted, that becomes the amount you pay.",
             },
             {
-              title: "Pay into escrow",
+              title: "Pay with Buyer Protection",
               body: "Checkout collects your delivery details and takes payment in full. The money is held — the seller is not paid yet.",
             },
             {
@@ -80,7 +80,7 @@ export const howItWorksPage: ContentPage = {
             },
             {
               title: "Get paid, then withdraw",
-              body: `Funds release on buyer confirmation, or automatically ${SITE.facts.autoReleaseAfterShipmentHours} hours after you mark the order sent. Commission is deducted from the released amount, and the rest becomes your withdrawable balance — minimum ₦${SITE.facts.minimumPayoutNgn.toLocaleString()} per payout, expected within about ${SITE.facts.payoutProcessingBusinessDays} business days.`,
+              body: `Funds release on buyer confirmation, or automatically ${SITE.facts.autoReleaseAfterShipmentHours} hours after you mark the order sent. Commission is deducted from the released amount, and the rest is paid out to your bank account — minimum ₦${SITE.facts.minimumPayoutNgn.toLocaleString()} per payout, expected within about ${SITE.facts.payoutProcessingBusinessDays} business days.`,
             },
           ],
         },
@@ -94,7 +94,7 @@ export const howItWorksPage: ContentPage = {
           kind: "table",
           headers: ["State", "What it means", "Who moves it next"],
           rows: [
-            ["Awaiting acceptance", "The buyer has paid into escrow and the seller has been notified", "Seller"],
+            ["Awaiting acceptance", "The buyer has paid, with the payment held safely and the seller has been notified", "Seller"],
             ["Availability check", "The seller needs time, or the item is not available", "Seller"],
             ["Preparing", "The order is accepted and being packed", "Seller"],
             ["Shipped", "Dispatched and marked as sent; the release clock is running", "Buyer"],
@@ -148,7 +148,7 @@ export const howItWorksPage: ContentPage = {
     },
   ],
   related: [
-    { label: "Escrow payments explained", path: "/escrow" },
+    { label: "Buyer Protection explained", path: "/buyer-protection" },
     { label: "Offers and negotiation", path: "/offers" },
     { label: "Marketplace chat", path: "/chat" },
     { label: "For sellers", path: "/for-sellers" },

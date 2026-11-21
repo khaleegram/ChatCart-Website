@@ -2,17 +2,17 @@ import type { ContentPage } from "../types";
 
 export const featuresPage: ContentPage = {
   slug: "features",
-  title: "Features: Video Feed, Context Chat, Offers, Escrow and Payouts",
+  title: "Features: Video Feed, Context Chat, Offers, Buyer Protection and Payouts",
   description:
-    "Every part of ChatCart in one place: the video product feed, context-attached chat, offers and counters, escrow checkout, order tracking and seller payouts.",
+    "Every part of ChatCart in one place: the video product feed, context-attached chat, offers and counters, protected checkout, order tracking and seller payouts.",
   h1: "Every part of the marketplace, in one place",
-  lede: "ChatCart is five things working together. Split them apart and each one is ordinary — discovery without escrow is a feed, and escrow without chat is a payment page. The value is that they share the same order.",
+  lede: "ChatCart is five things working together. Split them apart and each one is ordinary — discovery without Buyer Protection is a feed, and Buyer Protection without chat is a payment page. The value is that they share the same order.",
   eyebrow: "Features",
   keywords: [
     "ChatCart features",
     "marketplace app features Nigeria",
     "video shopping app features",
-    "escrow marketplace features",
+    "marketplace features",
     "chat commerce features",
     "Nigeria social commerce app",
   ],
@@ -68,13 +68,13 @@ export const featuresPage: ContentPage = {
       ],
     },
     {
-      id: "escrow",
-      heading: "Escrow checkout and order states",
+      id: "buyer-protection",
+      heading: "Protected checkout and order states",
       blocks: [
         {
           kind: "text",
           paragraphs: [
-            "Payment is held in escrow instead of going to the seller directly. The order then moves through a small set of visible states — awaiting acceptance, preparing, shipped, completed, disputed or cancelled — and both sides read the same line.",
+            "Payment is held instead of going to the seller directly. The order then moves through a small set of visible states — awaiting acceptance, preparing, shipped, completed, disputed or cancelled — and both sides read the same line.",
           ],
         },
         {
@@ -95,7 +95,7 @@ export const featuresPage: ContentPage = {
         {
           kind: "text",
           paragraphs: [
-            "Released funds become a withdrawable balance. Payouts are requested in the app and sent to a bank account in the seller's name — minimum ₦5,000 per request, expected within about 3 business days. Commission is deducted at release, at the rate in effect when the order was placed.",
+            "After release, the seller's share is paid out. Payouts are requested in the app and sent to a bank account in the seller's name — minimum ₦5,000 per request, expected within about 3 business days. Commission is deducted at release, at the rate in effect when the order was placed.",
           ],
         },
       ],
@@ -119,7 +119,7 @@ export const featuresPage: ContentPage = {
   faqs: [
     {
       q: "Is ChatCart free to use?",
-      a: "Downloading and using ChatCart costs the buyer nothing. The platform earns a commission from the seller on completed orders, deducted when escrow funds are released.",
+      a: "Downloading and using ChatCart costs the buyer nothing. The platform earns a commission from the seller on completed orders, deducted when the payment is released.",
     },
     {
       q: "Does ChatCart work on Android and iPhone?",
@@ -127,7 +127,7 @@ export const featuresPage: ContentPage = {
     },
     {
       q: "Can I sell physical and digital products?",
-      a: "The flow is built around physical delivery, with delivery details and dispatch status as part of the order. Anything that does not ship as a parcel does not fit the escrow release model well.",
+      a: "The flow is built around physical delivery, with delivery details and dispatch status as part of the order. Anything that does not ship as a parcel does not fit the release model well.",
     },
     {
       q: "Are there prohibited items?",
@@ -137,7 +137,7 @@ export const featuresPage: ContentPage = {
   related: [
     { label: "Marketplace chat", path: "/chat" },
     { label: "Offers and negotiation", path: "/offers" },
-    { label: "Escrow payments", path: "/escrow" },
+    { label: "Buyer Protection", path: "/buyer-protection" },
     { label: "How ChatCart works", path: "/how-it-works" },
     { label: "For sellers", path: "/for-sellers" },
     { label: "For buyers", path: "/for-buyers" },

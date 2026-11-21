@@ -88,7 +88,7 @@ function ContextDMSimulation() {
   );
 }
 
-function EscrowSimulation() {
+function ProtectedPaymentSimulation() {
   return (
     <div className="relative h-24 w-full overflow-hidden rounded-2xl bg-[#fcfaf8] border border-black/5 flex items-center justify-center">
       <div className="relative flex items-center justify-center w-12 h-12">
@@ -147,10 +147,10 @@ export function Statistics() {
       sub: "Send direct messages with item details automatically attached.",
     },
     {
-      sim: <EscrowSimulation />,
-      label: "Escrow Protected",
+      sim: <ProtectedPaymentSimulation />,
+      label: "Buyer Protection",
       headline: "Safe Checkout",
-      sub: "Payments are held securely in escrow until delivery is confirmed.",
+      sub: "Payments are held safely until delivery is confirmed.",
     },
     {
       sim: <SellInstantlySimulation />,
